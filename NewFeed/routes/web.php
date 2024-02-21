@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', function () {
+    return view('authentication.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('authentication.register');
+})->name('register');
+
+Route::get('/forget', function () {
+    return view('authentication.forget');
+})->name('forget');
+
+Route::get('/reset/{token}',function (){
+    return view('authentication.reset');
 });
