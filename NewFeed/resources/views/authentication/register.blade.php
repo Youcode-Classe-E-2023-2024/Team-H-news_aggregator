@@ -1,3 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    @vite('resources/css/app.css')
+
+</head>
+<body>
 {{--  register --}}
 <div class="flex  items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
     <div
@@ -9,12 +21,12 @@
                 <div class="flex flex-col space-y-1">
                     <label for="name" class="text-sm font-semibold text-gray-500">Name</label>
                     <input type="text" id="name" name="name" autofocus
-                        class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                           class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                 </div>
                 <div class="flex flex-col space-y-1">
                     <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
                     <input type="email" id="email" name="email" autofocus
-                        class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                           class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                 </div>
                 <div class="flex flex-col space-y-1">
                     <div class="flex items-center justify-between">
@@ -22,7 +34,7 @@
 
                     </div>
                     <input type="password" id="password" name="password"
-                        class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                           class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                 </div>
                 <div class="flex flex-col space-y-1">
                     <div class="flex items-center justify-between">
@@ -31,11 +43,11 @@
 
                     </div>
                     <input type="confirm-password" id="confirm-password" name="confirm-password"
-                        class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                           class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
                 </div>
                 <div>
                     <button type="submit"
-                        class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4">
+                            class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4">
                         Register
                     </button>
                 </div>
@@ -53,9 +65,12 @@
             </p>
             <p class="flex flex-col items-center justify-center mt-10 text-center">
                 <span>you have an account?</span>
-                <a href="#" class="underline">log in!</a>
+                <a href={{route('login')}} class="underline">log in!</a>
             </p>
 
         </div>
     </div>
 </div>
+
+</body>
+</html>
