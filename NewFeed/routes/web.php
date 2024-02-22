@@ -28,3 +28,7 @@ Route::get('/forget', function () {
 Route::get('/reset/{token}',function (){
     return view('authentication.reset');
 });
+
+Route::get('/',function(){
+    return view('client.home');
+});
