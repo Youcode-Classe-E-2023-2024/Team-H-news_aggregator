@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,9 @@ Route::get('/forget', function () {
 Route::get('/reset/{token}',function (){
     return view('authentication.reset');
 });
+
+Route::get('/categories',[CategoriesController::class,'index'])->name('categories');
+Route::post('/categories',[CategoriesController::class,'store'])->name('add-category');
+Route::put('/categories',[CategoriesController::class,'update'])->name('update-category');
+Route::delete('/categories',[CategoriesController::class,'delete'])->name('delete-category');
+
