@@ -32,3 +32,7 @@ Route::get('/reset/{token}',function (){
 Route::get('/',function(){
     return view('client.home');
 });
+
+Route::get('/dahsboard',function(){
+    return view('admin\dashboard');
+});
