@@ -58,11 +58,11 @@
             <!-- Example Category Card -->
             <div class="bg-white rounded-lg shadow-md p-6">
                 <h2 class="text-lg font-semibold mb-2">{{ $category->name }}</h2>
-                <p class="text-gray-600">Description of the category goes here.</p>
+                <p class="text-gray-600">{{ $category->description }}</p>
                 <div class="mt-4">
                     <!-- Button to open the popup -->
                     <button class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2"
-                            onclick="openEditPopup({{ $category->id }}, '{{ $category->name }}')" >Edit</button>
+                            onclick="openEditPopup({{ $category->id }}, '{{ $category->name }}', '{{ $category->description }}')" >Edit</button>
 
                     <form action="{{ route('add-category') }}" method="post" style="display: inline">
                         @csrf
@@ -88,11 +88,17 @@
 
     <!-- Add Popup Form -->
     <div class="overlay" id="overlayAddPopup"></div>
-    <div class="popup" id="addPopup">
+    <div class="popup" id="addPopup" style="width: 50vw; min-width: 300px">
         <form action="{{ route('add-category') }}" method="post">
             @csrf
             <h2 class="text-lg font-semibold mb-2">Add Category</h2>
-            <input name="name" type="text" class="border border-gray-300 rounded-md px-3 py-2 w-full mb-4" placeholder="New Category Name">
+
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+            <input id="name" name="name" type="text" class="border border-gray-300 rounded-md px-3 py-2 w-full mb-4" placeholder="New Category Name">
+
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+            <textarea id="message" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-2" placeholder="Write description here..."></textarea>
+
             <div class="flex justify-end">
                 <!-- Button to close the popup -->
                 <a class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md mr-2" href="#" onclick="closeAddPopup()">Cancel</a>
@@ -105,13 +111,19 @@
 
     <!-- Edit Popup Form -->
     <div class="overlay" id="overlayEditPopup"></div>
-    <div class="popup" id="editPopup">
+    <div class="popup" id="editPopup" style="width: 50vw; min-width: 300px">
         <form action="{{ route('update-category') }}" method="post">
             @csrf
             @method('put')
             <h2 class="text-lg font-semibold mb-2">Edit Category</h2>
             <input name="id" type="hidden" id="categoryId">
+
+            <label for="nameInput" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
             <input id="nameInput" name="name" type="text" class="border border-gray-300 rounded-md px-3 py-2 w-full mb-4" placeholder="Edit Category Name">
+
+            <label for="messageInput" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+            <textarea id="messageInput" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mb-2" placeholder="Write description here..."></textarea>
+
             <div class="flex justify-end">
                 <!-- Button to close the popup -->
                 <a class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md mr-2" href="#" onclick="closeEditPopup()">Cancel</a>
@@ -125,13 +137,14 @@
 
 <!-- JavaScript to control the popup -->
 <script>
-    function openEditPopup(id, name) {
+    function openEditPopup(id, name, description) {
         document.getElementById("overlayEditPopup").style.display = "block";
         document.getElementById("editPopup").style.display = "block";
 
         // Set the value of the hidden input field with the category ID
         document.getElementById("categoryId").value = id;
         document.getElementById("nameInput").value = name;
+        document.getElementById("messageInput").value = description;
     }
 
     function closeEditPopup() {
