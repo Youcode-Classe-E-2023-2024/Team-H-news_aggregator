@@ -10,7 +10,8 @@
 <!--  END LOADER -->
 
 <!--  BEGIN NAVBAR  -->
-@include('partials.navbar')
+<x-nav-bar></x-nav-bar>
+
 <!--  END NAVBAR  -->
 
 <!--  BEGIN MAIN CONTAINER  -->
@@ -20,7 +21,7 @@
     <div class="search-overlay"></div>
 
     <!--  BEGIN SIDEBAR  -->
-    @include('partials.sidebar')
+    <x-side-bar></x-side-bar>
     <!--  END SIDEBAR  -->
 
     <!--  BEGIN CONTENT AREA  -->
