@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FluxRSSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,8 @@ Route::get('/',function(){
 Route::get('/dahsboard',function(){
     return view('admin\dashboard');
 });
+
+Route::get('/addRss', [FluxRSSController::class, 'addRssPage'])->name('addRss');
+Route::post('/storeRss', [FluxRSSController::class, 'store'])->name('addRss.index');
+
+Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index');
