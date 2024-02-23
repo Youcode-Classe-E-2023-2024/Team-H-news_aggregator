@@ -7,9 +7,13 @@ use Illuminate\Http\Request;
 
 class AdminStatsController extends Controller
 {
+<<<<<<< Updated upstream
 
 public function getTotalUsers()
 {
+=======
+    public function getTotalUsers(){
+>>>>>>> Stashed changes
     $totalUsers = User::count();
     return response()->json(['total_users' => $totalUsers]);
 }
@@ -29,7 +33,11 @@ public function getTotalUsers()
             'data' => $data
         ]);
     }
+<<<<<<< Updated upstream
 
 
 }
 
+=======
+}
+>>>>>>> Stashed changes
