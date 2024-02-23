@@ -43,3 +43,12 @@ Route::post('/login/send', [AuthController::class, 'login'])->name('login.send')
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
 });
+
+/**--- fati ----**/
+Route::get('/categories',[CategoriesController::class,'index'])->name('categories');
+Route::post('/categories',[CategoriesController::class,'store'])->name('add-category');
+Route::put('/categories',[CategoriesController::class,'update'])->name('update-category');
+Route::delete('/categories',[CategoriesController::class,'delete'])->name('delete-category');
+
+
+/**--- fati ----**/
