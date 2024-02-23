@@ -795,6 +795,9 @@
     {{-- Header --}}
 
 
+    @yield('content')
+
+
 </body>
 
 
