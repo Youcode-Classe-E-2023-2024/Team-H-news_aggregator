@@ -17,7 +17,8 @@
 
         <div class="p-5 bg-white md:flex-1">
             <h3 class="my-4 text-2xl font-semibold text-gray-700">News account </h3>
-            <form action="#" class="flex flex-col space-y-5">
+            <form action="{{route('register.send')}}" method="POST" class="flex flex-col space-y-5">
+                @csrf
                 <div class="flex flex-col space-y-1">
                     <label for="name" class="text-sm font-semibold text-gray-500">Name</label>
                     <input type="text" id="name" name="name" autofocus
