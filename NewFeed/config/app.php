@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Passport\PassportServiceProvider;
 
 return [
 
@@ -159,7 +160,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        PassportServiceProvider::class,
         /*
          * Application Service Providers...
          */
