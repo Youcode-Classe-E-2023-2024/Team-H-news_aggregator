@@ -34,12 +34,12 @@ Route::get('/',function(){
     return view('client.home');
 });
 
-Route::get('/dahsboard',function(){
-    return view('admin\dashboard');
-});
+Route::get('/dashboard',function(){
+    return view('admin.dashboard');
+})->name('dashboard');
 Route::post('/register/send', [AuthController::class, 'register'])->name('register.send');
 Route::post('/login/send', [AuthController::class, 'login'])->name('login.send');
- 
+
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
 });

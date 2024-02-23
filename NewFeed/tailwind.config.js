@@ -9,11 +9,11 @@ export default {
     fontFamily: {
       satoshi: ['Satoshi', 'sans-serif'],
     },
-    screens: {
-      '2xsm': '375px',
-      xsm: '425px',
-      '3xl': '2000px',
-    },
+    // screens: {
+    //   '2xsm': '375px',
+    //   xsm: '425px',
+    //   '3xl': '2000px',
+    // },
     extend: {
       colors: {
         current: 'currentColor',
