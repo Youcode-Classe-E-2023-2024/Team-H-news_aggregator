@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -19,10 +20,15 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:6',
             'email' => 'required|email',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:6',
+            'confirme_password' => 'required|same:password',
         ]);
+       
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            $error = $validator->errors();
+            // return redirect()->back()->withErrors($validator)->withInput();
+            return response()->json(['error' => $error], 400);
+
         }
  
         $user = User::create([
@@ -32,9 +38,8 @@ class AuthController extends Controller
         ]);
  
         $token = $user->createToken('Laravel-10-Passport-Auth')->accessToken;
-        return redirect()->back()->with('message', 'Your have been successfully registered');
-
-        // return response()->json(['token' => $token], 200);
+        // return redirect()->back()->with('message', 'Your have been successfully registered');
+        return response()->json(['token' => $token], 200);
     }
  
     /**
@@ -42,6 +47,8 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
+        
+
         $data = [
             'email' => $request->email,
             'password' => $request->password
@@ -50,8 +57,10 @@ class AuthController extends Controller
         if (auth()->attempt($data)) {
             $token = auth()->user()->createToken('Laravel-10-Passport-Auth')->accessToken;
             return response()->json(['token' => $token], 200);
+
         } else {
-            return response()->json(['error' => 'Unauthorised'], 401);
+            return response()->json(['error' => 'Invalid credentials. Please check your email and password and try again.'], 401);
+
         }
     }
 
