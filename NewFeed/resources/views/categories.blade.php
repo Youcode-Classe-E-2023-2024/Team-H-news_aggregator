@@ -30,11 +30,18 @@
                                             </div>
                                             <div class="note-action d-flex">
                                                 <div class="pe-3">
-                                                    <a onclick="openEditModal({{ $category->id }}, '{{ $category->name }}', '{{ $category->description }}')" class="fa-solid fa-pencil fa-lg" href="javascript:void(0);"></a>
+                                                    <button class="btn btn-primary" onclick="openEditModal({{ $category->id }}, '{{ $category->name }}', '{{ $category->description }}')">
+                                                        <span><i class="fa-solid fa-pencil"></i></span>
+                                                    </button>
                                                 </div>
                                                 <div>
-                                                    <form action="">
-                                                        <a class="fa-solid fa-trash fa-lg" href="javascript:void(0);"></a>
+                                                    <form action="{{ route('delete-category') }}" method="post" style="display: inline">
+                                                        @csrf
+                                                        @method('delete')
+
+                                                        <!-- Button to delete the category -->
+                                                        <input name="id" type="hidden" value="{{ $category->id }}">
+                                                        <button type="submit" class="btn"><span><i class="fa-solid fa-trash"></i></span></button>
                                                     </form>
                                                 </div>
                                             </div>
