@@ -48,9 +48,10 @@ Route::middleware('auth:api')->group(function () {
 
 /** ---- Mohammed ---- **/
 
-Route::get('/addRss', [FluxRSSController::class, 'addRssPage'])->name('addRss');
-Route::post('/storeRss', [FluxRSSController::class, 'store'])->name('addRss.index');
+Route::get('/addRss', [FluxRSSController::class, 'addRssPage'])->name('addRss.index');
+Route::post('/addRss', [FluxRSSController::class, 'store'])->name('addRss.store');
 
 Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index');
+Route::post('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.send');
 
 /** ---- Mohammed ---- **/
