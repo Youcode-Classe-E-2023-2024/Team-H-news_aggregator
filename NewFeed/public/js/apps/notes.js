@@ -1,3 +1,14 @@
+function openEditModal(id, name, description) {
+  $('#notesMailModalEdit').modal('show');
+  $('.btn-n-save').hide();
+  $('#btn-n-add').show();
+
+  // Set the value of the hidden input field with the category ID
+  document.getElementById("categoryId").value = id;
+  document.getElementById("nameInput").value = name;
+  document.getElementById("descInput").value = description;
+}
+
 $(document).ready(function() {
     function deleteNote() {
         $(".delete-note").off('click').on('click', function(event) {
