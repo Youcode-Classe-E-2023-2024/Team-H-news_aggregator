@@ -1,11 +1,11 @@
 <x-layouts.admin-layout title="Dashboard" >
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
-    
+
             <div class="middle-content container-xxl p-0">
-    
+
                 <div class="row layout-top-spacing">
-    
+
                     <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-six">
                             <div class="widget-heading">
@@ -24,7 +24,7 @@
                                                 <circle cx="5" cy="12" r="1"></circle>
                                             </svg>
                                         </a>
-    
+
                                         <div class="dropdown-menu left" aria-labelledby="statistics"
                                             style="will-change: transform;">
                                             <a class="dropdown-item" href="javascript:void(0);">View</a>
@@ -43,7 +43,7 @@
                                         <div id="total-users"></div>
                                     </div>
                                 </div>
-    
+
                                 <div class="w-chart-section">
                                     <div class="w-detail">
                                         <p class="w-title">Paid Visits</p>
@@ -55,9 +55,9 @@
                                 </div>
                             </div>
                         </div>
-    
+
                     </div>
-    
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-card-four">
                             <div class="widget-content">
@@ -80,7 +80,7 @@
                                                     <circle cx="5" cy="12" r="1"></circle>
                                                 </svg>
                                             </a>
-    
+
                                             <div class="dropdown-menu left" aria-labelledby="expenses"
                                                 style="will-change: transform;">
                                                 <a class="dropdown-item" href="javascript:void(0);">This
@@ -93,9 +93,9 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="w-content">
-    
+
                                     <div class="w-info">
                                         <p class="value">$ 45,141 <span>this week</span> <svg
                                                 xmlns="http://www.w3.org/2000/svg" width="24"
@@ -106,45 +106,45 @@
                                                 <polyline points="17 6 23 6 23 12"></polyline>
                                             </svg></p>
                                     </div>
-    
+
                                 </div>
-    
+
                                 <div class="w-progress-stats">
                                     <div class="progress">
                                         <div class="progress-bar bg-gradient-secondary" role="progressbar"
                                             style="width: 57%" aria-valuenow="57" aria-valuemin="0"
                                             aria-valuemax="100"></div>
                                     </div>
-    
+
                                     <div class="">
                                         <div class="w-icon">
                                             <p>57%</p>
                                         </div>
                                     </div>
-    
+
                                 </div>
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-card-five">
                             <div class="widget-content">
                                 <div class="account-box">
-    
+
                                     <div class="info-box">
                                         <div class="icon">
                                             <span>
                                                 <img src="../src/assets/img/money-bag.png" alt="money-bag">
                                             </span>
                                         </div>
-    
+
                                         <div class="balance-info">
                                             <h6>Total Balance</h6>
                                             <p>$41,741.42</p>
                                         </div>
                                     </div>
-    
+
                                     <div class="card-bottom-section">
                                         <div><span class="badge badge-light-success">+ 13.6% <svg
                                                     xmlns="http://www.w3.org/2000/svg" width="24"
@@ -161,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                     <div class="widget widget-card-three">
                         <div class="widget-content">
@@ -185,14 +185,14 @@
                         </div>
                     </div>
                 </div> -->
-    
+
                     <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-chart-three">
                             <div class="widget-heading">
                                 <div class="">
                                     <h5 class="">Unique Visitors</h5>
                                 </div>
-    
+
                                 <div class="task-action">
                                     <div class="dropdown ">
                                         <a class="dropdown-toggle" href="#" role="button"
@@ -207,7 +207,7 @@
                                                 <circle cx="5" cy="12" r="1"></circle>
                                             </svg>
                                         </a>
-    
+
                                         <div class="dropdown-menu left" aria-labelledby="uniqueVisitors">
                                             <a class="dropdown-item" href="javascript:void(0);">View</a>
                                             <a class="dropdown-item" href="javascript:void(0);">Update</a>
@@ -216,19 +216,19 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="widget-content">
                                 <div id="uniqueVisits"></div>
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-activity-five">
-    
+
                             <div class="widget-heading">
                                 <h5 class="">Activity Log</h5>
-    
+
                                 <div class="task-action">
                                     <div class="dropdown">
                                         <a class="dropdown-toggle" href="#" role="button"
@@ -243,7 +243,7 @@
                                                 <circle cx="5" cy="12" r="1"></circle>
                                             </svg>
                                         </a>
-    
+
                                         <div class="dropdown-menu left" aria-labelledby="activitylog"
                                             style="will-change: transform;">
                                             <a class="dropdown-item" href="javascript:void(0);">View All</a>
@@ -252,14 +252,14 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="widget-content">
-    
+
                                 <div class="w-shadow-top"></div>
-    
+
                                 <div class="mt-container mx-auto">
                                     <div class="timeline-line">
-    
+
                                         <div class="item-timeline timeline-new">
                                             <div class="t-dot">
                                                 <div class="t-secondary"><svg xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +282,7 @@
                                                 <p>07 May, 2022</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="item-timeline timeline-new">
                                             <div class="t-dot">
                                                 <div class="t-success"><svg xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +304,7 @@
                                                 <p>06 May, 2022</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="item-timeline timeline-new">
                                             <div class="t-dot">
                                                 <div class="t-primary"><svg xmlns="http://www.w3.org/2000/svg"
@@ -322,7 +322,7 @@
                                                 <p>01 May, 2022</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="item-timeline timeline-new">
                                             <div class="t-dot">
                                                 <div class="t-danger"><svg xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +342,7 @@
                                                 <p>30 Apr, 2022</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="item-timeline timeline-new">
                                             <div class="t-dot">
                                                 <div class="t-warning"><svg xmlns="http://www.w3.org/2000/svg"
@@ -365,7 +365,7 @@
                                                 <p>25 Apr, 2022</p>
                                             </div>
                                         </div>
-    
+
                                         <div class="item-timeline timeline-new">
                                             <div class="t-dot">
                                                 <div class="t-dark"><svg xmlns="http://www.w3.org/2000/svg"
@@ -393,12 +393,12 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="w-shadow-bottom"></div>
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget-four">
                             <div class="widget-heading">
@@ -437,7 +437,7 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                                     <div class="browser-list">
                                         <div class="w-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -451,12 +451,12 @@
                                             </svg>
                                         </div>
                                         <div class="w-browser-details">
-    
+
                                             <div class="w-browser-info">
                                                 <h6>Safari</h6>
                                                 <p class="browser-count">25%</p>
                                             </div>
-    
+
                                             <div class="w-browser-stats">
                                                 <div class="progress">
                                                     <div class="progress-bar bg-gradient-danger"
@@ -465,11 +465,11 @@
                                                         aria-valuemax="100"></div>
                                                 </div>
                                             </div>
-    
+
                                         </div>
-    
+
                                     </div>
-    
+
                                     <div class="browser-list">
                                         <div class="w-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -485,12 +485,12 @@
                                             </svg>
                                         </div>
                                         <div class="w-browser-details">
-    
+
                                             <div class="w-browser-info">
                                                 <h6>Others</h6>
                                                 <p class="browser-count">15%</p>
                                             </div>
-    
+
                                             <div class="w-browser-stats">
                                                 <div class="progress">
                                                     <div class="progress-bar bg-gradient-warning"
@@ -499,17 +499,17 @@
                                                         aria-valuemax="100"></div>
                                                 </div>
                                             </div>
-    
+
                                         </div>
-    
+
                                     </div>
-    
+
                                 </div>
-    
+
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="row widget-statistic">
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 layout-spacing">
@@ -602,27 +602,27 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-five">
-    
+
                             <div class="widget-heading">
-    
+
                                 <a href="javascript:void(0)" class="task-info">
-    
+
                                     <div class="usr-avatar">
                                         <span>FD</span>
                                     </div>
-    
+
                                     <div class="w-title">
-    
+
                                         <h5>Figma Design</h5>
                                         <span>Design Project</span>
-    
+
                                     </div>
-    
+
                                 </a>
-    
+
                                 <div class="task-action">
                                     <div class="dropdown">
                                         <a class="dropdown-toggle" href="#" role="button"
@@ -637,7 +637,7 @@
                                                 <circle cx="5" cy="12" r="1"></circle>
                                             </svg>
                                         </a>
-    
+
                                         <div class="dropdown-menu left" aria-labelledby="pendingTask"
                                             style="will-change: transform;">
                                             <a class="dropdown-item" href="javascript:void(0);">View Project</a>
@@ -646,17 +646,17 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                             </div>
-    
-    
+
+
                             <div class="widget-content">
-    
+
                                 <p>Doloribus nisi vel suscipit modi, optio ex repudiandae voluptatibus officiis
                                     commodi.</p>
-    
+
                                 <div class="progress-data">
-    
+
                                     <div class="progress-info">
                                         <div class="task-count"><svg xmlns="http://www.w3.org/2000/svg"
                                                 width="24" height="24" viewBox="0 0 24 24"
@@ -673,17 +673,17 @@
                                             <p>86.2%</p>
                                         </div>
                                     </div>
-    
+
                                     <div class="progress">
                                         <div class="progress-bar bg-primary" role="progressbar"
                                             style="width: 65%" aria-valuenow="90" aria-valuemin="0"
                                             aria-valuemax="100"></div>
                                     </div>
-    
+
                                 </div>
-    
+
                                 <div class="meta-info">
-    
+
                                     <div class="due-time">
                                         <p><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                                 height="24" viewBox="0 0 24 24" fill="none"
@@ -693,10 +693,10 @@
                                                 <polyline points="12 6 12 12 16 14"></polyline>
                                             </svg> 3 Days Left</p>
                                     </div>
-    
-    
+
+
                                     <div class="avatar--group">
-    
+
                                         <div class="avatar translateY-axis more-group">
                                             <span class="avatar-title">+6</span>
                                         </div>
@@ -709,22 +709,22 @@
                                         <div class="avatar translateY-axis">
                                             <img alt="avatar" src="../src/assets/img/profile-19.jpg" />
                                         </div>
-    
+
                                     </div>
-    
+
                                 </div>
-    
-    
+
+
                             </div>
-    
+
                         </div>
-    
+
                     </div>
-    
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-card-one">
                             <div class="widget-content">
-    
+
                                 <div class="media">
                                     <div class="w-img">
                                         <img src="../src/assets/img/profile-19.jpg" alt="avatar">
@@ -734,10 +734,10 @@
                                         <p class="meta-date-time">Monday, May 18</p>
                                     </div>
                                 </div>
-    
+
                                 <p>"Duis aute irure dolor" in reprehenderit in voluptate velit esse cillum "dolore
                                     eu fugiat" nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-    
+
                                 <div class="w-action">
                                     <div class="card-like">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -750,7 +750,7 @@
                                         </svg>
                                         <span>551 Likes</span>
                                     </div>
-    
+
                                     <div class="read-more">
                                         <a href="javascript:void(0);">Read More <svg
                                                 xmlns="http://www.w3.org/2000/svg" width="24"
@@ -765,11 +765,11 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-card-two">
                             <div class="widget-content">
-    
+
                                 <div class="media">
                                     <div class="w-img">
                                         <img src="../src/assets/img/g-8.png" alt="avatar">
@@ -779,7 +779,7 @@
                                         <p class="meta-date-time">Bronx, NY</p>
                                     </div>
                                 </div>
-    
+
                                 <div class="card-bottom-section">
                                     <h5>4 Members Going</h5>
                                     <div class="img-group">
@@ -793,11 +793,11 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
-    
+
             </div>
-    
+
         </div>
         <!--  BEGIN FOOTER  -->
         <div class="footer-wrapper">
@@ -816,8 +816,12 @@
                     </svg></p>
             </div>
         </div>
+
+
         <!--  END FOOTER  -->
     </div>
+
+
 </x-layouts.admin-layout >
 
 
