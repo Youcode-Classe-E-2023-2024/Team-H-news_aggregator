@@ -820,6 +820,16 @@
 
         <!--  END FOOTER  -->
     </div>
+    <canvas id="graphique"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <canvas id="newsCategoriesChart" width="400" height="400"></canvas>
+
+
+    <script src="{{ asset('js/Chart1.js') }}"></script>
+    <script src="{{ asset('js/Chart1.js') }}"></script>
+
 
 
 </x-layouts.admin-layout >
