@@ -794,7 +794,7 @@
 
     {{-- Header --}}
 
-
+    <script src="{{ asset('Chart1.js') }}"></script>
 </body>
 
 
