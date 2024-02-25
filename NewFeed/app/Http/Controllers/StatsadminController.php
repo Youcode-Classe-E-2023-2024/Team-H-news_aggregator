@@ -38,8 +38,23 @@ class StatsadminController extends Controller
             return $item->count();
         });
 
-        return view('dashboard.tendance_enregistrement_utilisateur', compact('donnees'));
+        return response()->json($donnees);
     }
+
+
+
+    public function fetchPopularNewsCategories()
+    {
+        $categories = Article::select('category', \DB::raw('COUNT(*) as count'))
+            ->groupBy('category')
+            ->orderBy('count', 'desc')
+            ->take(5) // Vous pouvez modifier le nombre de catégories à afficher
+            ->get();
+
+        return response()->json($categories);
+    }
+
+
 
 
 }
