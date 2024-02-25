@@ -48,10 +48,18 @@ class StatsadminController extends Controller
         $categories = Article::select('category', \DB::raw('COUNT(*) as count'))
             ->groupBy('category')
             ->orderBy('count', 'desc')
-            ->take(5) // Vous pouvez modifier le nombre de catégories à afficher
+            ->take(5) 
             ->get();
 
         return response()->json($categories);
+    }
+
+    public function topTrendingNews()
+    {
+        $articles = Article::orderBy('views', 'desc')
+        ->take(5)
+        ->get();
+        return response()->json($articles);
     }
 
 
