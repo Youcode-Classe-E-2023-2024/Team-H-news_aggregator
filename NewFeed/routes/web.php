@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FluxRSSController;
 
@@ -45,6 +46,13 @@ Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
 });
 
+/**--- fati ----**/
+Route::get('/categories',[CategoriesController::class,'index'])->name('categories');
+Route::post('/categories',[CategoriesController::class,'store'])->name('add-category');
+Route::put('/categories',[CategoriesController::class,'update'])->name('update-category');
+Route::delete('/categories',[CategoriesController::class,'delete'])->name('delete-category');
+
+/**--- fati ----**/
 
 /** ---- Mohammed ---- **/
 
@@ -55,3 +63,4 @@ Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index')
 Route::post('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.send');
 
 /** ---- Mohammed ---- **/
+
