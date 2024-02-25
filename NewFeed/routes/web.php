@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FluxRSSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,13 @@ Route::put('/categories',[CategoriesController::class,'update'])->name('update-c
 Route::delete('/categories',[CategoriesController::class,'delete'])->name('delete-category');
 
 /**--- fati ----**/
+
+/** ---- Mohammed ---- **/
+
+Route::get('/addRss', [FluxRSSController::class, 'addRssPage'])->name('addRss');
+Route::post('/storeRss', [FluxRSSController::class, 'store'])->name('addRss.index');
+
+Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index');
+
+/** ---- Mohammed ---- **/
+
