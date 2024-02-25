@@ -1,6 +1,5 @@
-@include('partials.header')
-</head>
-<body class="layout-boxed" data-bs-spy="scroll" data-bs-target="#navSection" data-bs-offset="100">
+
+<body class="form">
 @if($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -12,116 +11,115 @@
     </div>
 @endif
 <!-- BEGIN LOADER -->
+
+<body class="form">
+
+<!-- BEGIN LOADER -->
 <div id="load_screen"> <div class="loader"> <div class="loader-content">
             <div class="spinner-grow align-self-center"></div>
         </div></div></div>
 <!--  END LOADER -->
 
-<!--  BEGIN NAVBAR  -->
-@include('partials.navbar')
-<!--  END NAVBAR  -->
+<div class="auth-container d-flex">
 
-<!--  BEGIN MAIN CONTAINER  -->
-<div class="main-container " id="container">
+    <div class="container mx-auto align-self-center">
 
-    <div class="overlay"></div>
-    <div class="cs-overlay"></div>
-    <div class="search-overlay"></div>
+        <div class="row">
 
-    <!--  BEGIN SIDEBAR  -->
-    @include('partials.sidebar')
-    <!--  END SIDEBAR  -->
+            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center mx-auto">
+                <div class="card mt-3 mb-3">
+                    <div class="card-body">
 
-    <!--  BEGIN CONTENT AREA  -->
-    <div id="content" class="main-content">
-        <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
 
-            <div class="container">
+                                <h2>Flux Rss</h2>
+                                <p>Enter your Resource URL</p>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <form action="{{route('addRss.index')}}" method="post">
+                                    @csrf
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Name</label>
+                                            <input type="text" class="form-control add-billing-address-input" name="name" value="{{ old('name') }}">
+                                        </div>
+                                    </div>
 
-                <!-- BREADCRUMB -->
-                <div class="page-meta">
-                    <nav class="text-white" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li>Flux RSS Resource</li>
-                        </ol>
-                    </nav>
-                </div>
-                <!-- /BREADCRUMB -->
+                                    <div class="col-md-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">URL</label>
+                                            <input type="text" class="form-control" name="url" value="{{ old('url') }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <div class="form-check form-check-primary form-check-inline">
+                                                <input class="form-check-input me-3" type="checkbox" id="form-check-default" name="agreement">
+                                                <label class="form-check-label" for="form-check-default">
+                                                    I agree the <a href="#" class="text-primary">Terms and Conditions</a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                <div id="navSection" data-bs-spy="affix" class="nav  sidenav">
-                    <div class="sidenav-content">
-                        <a href="#basic" class="active nav-link">Add Your Resource Info</a>
-                    </div>
-                </div>
-
-                <div class="row layout-top-spacing">
-                    <form action="{{route('addRss.store')}}" method="post">
-                        @method('post')
-                        @csrf
-
-                        <div id="basic" class="col-lg-12 col-sm-12 col-12 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Default</h4>
+                                    <div class="col-12">
+                                        <div class="mb-4">
+                                            <button class="btn btn-secondary w-100">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="">
+                                    <div class="seperator">
+                                        <hr>
+                                        <div class="seperator-text"> <span>Or continue with</span></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="widget-content widget-content-area">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" >@</span>
-                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="name" value="{{old('name')}}">
-                                </div>
 
-
-                                <label for="basic-url" class="form-label">Your Resource URL</label>
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="url" value="{{old('url')}}">
-                                </div>
-
-                                <div class="form-label">
-                                    <input type="text" class="form-control" placeholder="Provider Name" name="provider" value="{{old('provider')}}">
-                                    <span class="input-group-text">@</span>
-                                    <input type="text" class="form-control" placeholder="category" name="category" value="{{old('category')}}">
-                                </div>
-
-                                <div class="input-group">
-                                    <span class="input-group-text">Description</span>
-                                    <textarea class="form-control" aria-label="With textarea" name="description" value="{{old('description')}}"></textarea>
-                                </div>
-                                <div class="input-group">
-                                    <input type="submit" name="submit" placeholder="Submit Resource" class="form-control mt-4 fw-bold shadow">
+                            <div class="col-sm-4 col-12">
+                                <div class="mb-4">
+                                    <button class="btn  btn-social-login w-100 ">
+                                        <img src="https://designreset.com/cork/html/src/assets/img/google-gmail.svg" alt="" class="img-fluid">
+                                        <span class="btn-text-inner">Google</span>
+                                    </button>
                                 </div>
                             </div>
+
+                            <div class="col-sm-4 col-12">
+                                <div class="mb-4">
+                                    <button class="btn  btn-social-login w-100">
+                                        <img src="https://designreset.com/cork/html/src/assets/img/github-icon.svg" alt="" class="img-fluid">
+                                        <span class="btn-text-inner">Github</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 col-12">
+                                <div class="mb-4">
+                                    <button class="btn  btn-social-login w-100">
+                                        <img src="https://designreset.com/cork/html/src/assets/img/twitter.svg" alt="" class="img-fluid">
+                                        <span class="btn-text-inner">Twitter</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="text-center">
+                                    <p class="mb-0">Already have an account ? <a href="javascript:void(0);" class="text-warning">Sign in</a></p>
+                                </div>
+                            </div>
+
                         </div>
+
                     </div>
-                    </form>
-
                 </div>
-
-
             </div>
+
         </div>
-
-        <!--  BEGIN FOOTER  -->
-        <div class="footer-wrapper">
-            <div class="footer-section f-section-1">
-                <p class="">Copyright © <span class="dynamic-year">2022</span> <a target="_blank" href="https://designreset.com/cork-admin/">DesignReset</a>, All rights reserved.</p>
-            </div>
-            <div class="footer-section f-section-2">
-                <p class="">Coded with <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></p>
-            </div>
-        </div>
-        <!--  END FOOTER  -->
 
     </div>
-    <!--  END CONTENT AREA  -->
+
 </div>
-<!-- END MAIN CONTAINER -->
-
-
 
 </body>
-@include('partials.footer')
