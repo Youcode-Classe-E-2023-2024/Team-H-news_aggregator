@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/FluxRSSController.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/FluxRSSController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/app/Models/fluxRSS.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Models/fluxRSS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/database/migrations/2024_02_22_150321_create_flex_rss_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/database/migrations/2024_02_22_150321_create_flux_rss_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/partials/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +19,13 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,20 +170,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Apache24/htdocs/Team-H-news_aggregator&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Apache24/htdocs/Team-H-news_aggregator",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -205,7 +202,7 @@
       <workItem from="1708686293591" duration="6153000" />
       <workItem from="1708699123624" duration="178000" />
       <workItem from="1708699309721" duration="2330000" />
-      <workItem from="1708774054150" duration="19407000" />
+      <workItem from="1708774054150" duration="29220000" />
     </task>
     <servers />
   </component>

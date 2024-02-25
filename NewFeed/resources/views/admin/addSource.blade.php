@@ -1,4 +1,5 @@
 @include('partials.header')
+</head>
 <body class="layout-boxed" data-bs-spy="scroll" data-bs-target="#navSection" data-bs-offset="100">
 @if($errors->any())
     <div class="alert alert-danger">
