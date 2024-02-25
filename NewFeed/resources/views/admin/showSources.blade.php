@@ -1,4 +1,6 @@
 @include('partials.header')
+    <link rel="stylesheet" href="{{asset('css/pagination.css')}}">
+</head>
 <body class="layout-boxed" data-bs-spy="scroll" data-bs-target="#navSection" data-bs-offset="140">
 @if(session('success'))
     <div class="alert alert-success">{{session('success')}}</div>
@@ -32,21 +34,11 @@
 
             <div class="middle-content container-xxl p-0">
 
-                <!-- BREADCRUMB -->
-                <div class="page-meta">
-                    <nav class="breadcrumb-style-one" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">App</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
-                        </ol>
-                    </nav>
-                </div>
-                <!-- /BREADCRUMB -->
-
                 <div class="row layout-top-spacing">
                     <div class="col-lg-3 col-md-3 col-sm-3 mb-4">
                         <input id="t-text" type="text" name="searched" placeholder="Search" class="form-control" required="">
                     </div>
+                    <h2>Posts:</h2>
                     <form action="{{route('rss.send')}}" method="post" class="one">
                         @csrf
                         @method('post')
@@ -112,9 +104,9 @@
                             </div>
                         </a>
                     </div>
-                    @if(!empty($news))
+                    @if(!empty($newsPaginated))
 
-                        @foreach($news as $new)
+                        @foreach($newsPaginated as $new)
                             <div card class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
                                 <a href="app-blog-post.html" class="card style-2 mb-md-0 mb-4">
                                     @if(is_null($new['image'] || empty($new['image'])))
@@ -136,6 +128,20 @@
                             </div>
 
                         @endforeach
+                            <div class="pagination">
+                                {{-- Custom pagination links --}}
+                                @if ($newsPaginated->currentPage() > 1)
+                                    <a href="{{ $newsPaginated->previousPageUrl() }}" rel="prev">&laquo; Previous</a>
+                                @endif
+
+                                @for ($i = 1; $i <= $newsPaginated->lastPage(); $i++)
+                                    <a href="{{ $newsPaginated->url($i) }}">{{ $i }}</a>
+                                @endfor
+
+                                @if ($newsPaginated->currentPage() < $newsPaginated->lastPage())
+                                    <a href="{{ $newsPaginated->nextPageUrl() }}" rel="next">Next &raquo;</a>
+                                @endif
+                            </div>
 
                     @else
                         @for($i = 0; $i <= 9; $i++)
@@ -201,5 +207,6 @@
 
     searched.addEventListener('input', getSearched);
 
+const pagination = document.getElementsByClassName('pagination');
 
 </script>
