@@ -9,10 +9,13 @@ class fluxRSS extends Model
 {
     use HasFactory;
 
-    protected $table = 'flex_rss';
+    protected $table = 'flux_rss';
 
     protected $fillable = [
         'name',
         'url',
+        'provider',
+        'category',
+        'description',
     ];
 }

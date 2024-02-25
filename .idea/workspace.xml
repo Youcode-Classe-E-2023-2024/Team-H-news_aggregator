@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/NewFeed/.env" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/FluxRSSController.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/FluxRSSController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/app/Models/fluxRSS.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Models/fluxRSS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/database/migrations/2024_02_22_150321_create_flex_rss_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/database/migrations/2024_02_22_150321_create_flux_rss_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/partials/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,6 +165,8 @@
       <path value="$PROJECT_DIR$/NewFeed/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/NewFeed/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/NewFeed/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/simplepie/simplepie" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/willvincent/feeds" />
     </include_path>
   </component>
   <component name="ProjectId" id="2clVjr7EiHJUEfchF1YitnLE1m6" />
@@ -191,7 +204,8 @@
       <updated>1708686291424</updated>
       <workItem from="1708686293591" duration="6153000" />
       <workItem from="1708699123624" duration="178000" />
-      <workItem from="1708699309721" duration="1650000" />
+      <workItem from="1708699309721" duration="2330000" />
+      <workItem from="1708774054150" duration="19407000" />
     </task>
     <servers />
   </component>
