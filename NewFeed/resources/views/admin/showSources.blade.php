@@ -3,6 +3,7 @@
 @if(session('success'))
     <div class="alert alert-success">{{session('success')}}</div>
 @endif
+
 <!-- BEGIN LOADER -->
 <div id="load_screen"> <div class="loader"> <div class="loader-content">
             <div class="spinner-grow align-self-center"></div>
@@ -10,7 +11,7 @@
 <!--  END LOADER -->
 
 <!--  BEGIN NAVBAR  -->
-<x-nav-bar></x-nav-bar>
+@include('partials.navbar')
 
 <!--  END NAVBAR  -->
 
@@ -21,7 +22,7 @@
     <div class="search-overlay"></div>
 
     <!--  BEGIN SIDEBAR  -->
-    <x-side-bar></x-side-bar>
+    @include('partials.sidebar')
     <!--  END SIDEBAR  -->
 
     <!--  BEGIN CONTENT AREA  -->
@@ -44,31 +45,43 @@
 
                 <div class="row layout-top-spacing">
                     <div class="col-lg-3 col-md-3 col-sm-3 mb-4">
-                        <input id="t-text" type="text" name="txt" placeholder="Search" class="form-control" required="">
+                        <input id="t-text" type="text" name="searched" placeholder="Search" class="form-control" required="">
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 mb-4 ms-auto">
-                        <select class="form-select form-select" aria-label="Default select example">
-                            <option selected="">All Category</option>
-                            <option value="3">Wordpress</option>
-                            <option value="1">Admin</option>
-                            <option value="2">Themeforest</option>
-                            <option value="3">Travel</option>
-                        </select>
-                    </div>
+                    <form action="{{route('rss.send')}}" method="post" class="one">
+                        @csrf
+                        @method('post')
+                        <div class="row mb-4">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3  ms-auto">
+                                <select class="form-select form-select" aria-label="Default select example" name="category">
+                                    <option class="option" selected="" value="0">All Category</option>
+                                    <option class="option" value="users">News</option>
+                                    <option class="option" value="crime">Crime</option>
+                                    <option class="option" value="ufo">Ufo</option>
+                                    <option class="option" value="technology">Technology</option>
+                                </select>
 
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 mb-4">
-                        <select class="form-select form-select" aria-label="Default select example">
-                            <option selected="">Sort By</option>
-                            <option value="1">Recent</option>
-                            <option value="2">Most Upvoted</option>
-                            <option value="3">Popular</option>
-                        </select>
-                    </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 ">
+                                <select class="form-select form-select" aria-label="Default select example" name="sort">
+                                    <option selected="">Sort By</option>
+                                    <option value="1">Recent</option>
+                                    <option value="2">Oldest</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group d-flex justify-content-end row">
+                            <div @class('col-4 hidden')></div>
+                            <div @class('col-4 hidden')></div>
+                            <input type="submit" name="submit" placeholder="Submit Resource" class="form-control my-4 fw-bold shadow col-2 text-center" style="margin-right: 17px">
+                        </div>
+
+                    </form>
+
                 </div>
 
                 <div class="row">
 
-                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div  class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
                         <a href="app-blog-post.html" class="card style-2 mb-md-0 mb-4">
                             <img src="{{asset('images/grid-blog-style-3.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body px-0 pb-0">
@@ -99,23 +112,23 @@
                             </div>
                         </a>
                     </div>
-                    @if(!empty($news) && !isset($errors))
+                    @if(!empty($news))
 
                         @foreach($news as $new)
-                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
+                            <div card class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 mb-4">
                                 <a href="app-blog-post.html" class="card style-2 mb-md-0 mb-4">
-                                    @if(is_null($new->image))
+                                    @if(is_null($new['image'] || empty($new['image'])))
+
                                     <img src="{{asset('images/grid-blog-style-3.jpg')}}" class="card-img-top" alt="...">
                                     @else
-                                        <img src="{{$new->image}}" class="card-img-top" alt="...">
+                                        <img src="{{$new['image']}}" class="card-img-top" alt="...">
                                     @endif
                                         <div class="card-body px-0 pb-0">
-                                        <h5 class="card-title mb-3">The ideal work from home office setup</h5>
+                                        <h5 class="card-title mb-3">{{$new['description']}}</h5>
                                         <div class="media mt-4 mb-0 pt-1">
                                                 <img src="{{asset('images/profile-3.jpg')}}" class="card-media-image me-3" alt="">
                                             <div class="media-body">
-                                                <h4 class="media-heading mb-1">Vanessa Kirby</h4>
-                                                <p class="media-text">02 May</p>
+                                                <h4 class="media-heading mb-1">{{$new['title']}}</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -170,3 +183,23 @@
 
 </body>
 @include('partials.footer')
+<script>
+
+    const searched = document.getElementById('t-text');
+    const cards = document.querySelectorAll('[card]');
+
+    function getSearched() {
+        console.log('cool');
+        for (let i = 0; i < cards.length; i++) {
+            if (!cards[i].innerHTML.includes(searched.value)) {
+                cards[i].style.display = 'none';
+            } else {
+                cards[i].style.display = 'block';
+            }
+        }
+    }
+
+    searched.addEventListener('input', getSearched);
+
+
+</script>
