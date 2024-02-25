@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\StatsadminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,3 +44,7 @@ Route::post('/login/send', [AuthController::class, 'login'])->name('login.send')
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
 });
+
+Route::get('/api/donnees-graphique', [StatsadminController::class, 'tendanceEnregistrementUtilisateur']);
+
+Route::get('/api/popular-news-categories', [StatsadminController::class, 'fetchPopularNewsCategories']);
