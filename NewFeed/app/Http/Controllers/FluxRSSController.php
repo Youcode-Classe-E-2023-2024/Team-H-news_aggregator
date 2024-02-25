@@ -13,9 +13,12 @@ class FluxRSSController extends Controller
     }
 
     public function store(Request $request) {
-        $validator = Validator::make($request->only('name', 'url'), [
+        $validator = Validator::make($request->all(), [
             'name' => 'required|min:3|string',
-            'url' => 'required',
+            'url' => 'required|unique:flux_rss',
+            'provider' => 'required|string',
+            'category' => 'required|string|min:3',
+            'description' => 'required',
         ]);
 
         if($validator->fails()) {
@@ -27,36 +30,61 @@ class FluxRSSController extends Controller
         fluxRSS::create([
             'name' => $request->name,
             'url' => $request->url,
+            'provider' => $request->provider,
+            'category' => $request->category,
+            'description' => $request->description,
         ]);
 
         return redirect()->route('rss.index')->with('success', 'source added successfully!');
 
     }
 
-    public function showRss() {
-        $flux = fluxRSS::all();
+    public function showRss(Request $request)
+    {
+        $feedUrlsQuery = fluxRSS::query();
+
+        if ($request->category) {
+            $feedUrlsQuery->where('category', strip_tags($request->category));
+        }
+
+        $feedUrls = $feedUrlsQuery->get();
+
+        switch ($request->sort) {
+            case 1:
+                // newest
+                $feedUrls = $feedUrls->sortByDesc('created_at');
+                break;
+            default:
+                // oldest
+                $feedUrls = $feedUrls->sortBy('created_at');
+        }
+
+
+
         $news = [];
         $errors = [];
 
-        foreach ($flux as $feed) {
-            $url = $feed->url;
+        foreach ($feedUrls as $feedUrl) {
 
-            $rssData = simplexml_load_file($url);
+            $feed = simplexml_load_file($feedUrl->url);
+            $image = $feed->channel->image->url;
 
-            if ($rssData !== false) {
+            foreach ($feed->channel->item as $item) {
 
-                foreach ($rssData->channel->item as $item) {
-                    $news[] = [
-                        'title' => (string)$item->title,
-                        'description' => (string)$item->description,
-                        'image' => (string)$item->image,
-                    ];
+                if (isset($item->children('media', true)->thumbnail['url'])) {
+                    $image = (string)$item->children('media', true)->thumbnail['url'];
                 }
-            } else {
-                $errors[] = "Error fetching data from: $url";
+
+                $news[] = [
+                    'title' => $item->title,
+                    'description' => $item->description,
+                    'image' => $image,
+                ];
             }
         }
-        return view('admin.showSources', compact('news', 'errors'));
-    }
 
+        return view('admin.showSources', compact('news', ));
+
+
+    }
 }

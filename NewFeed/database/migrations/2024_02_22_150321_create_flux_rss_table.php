@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('flex_rss', function (Blueprint $table) {
+        Schema::create('source', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('url');
+            $table->string('provider');
+            $table->string('category');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('flex_rss');
+        Schema::dropIfExists('source');
     }
 };
