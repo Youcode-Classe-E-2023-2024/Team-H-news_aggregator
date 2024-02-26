@@ -4,13 +4,13 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Carbon\Carbon;
+use Illuminate\Support\Carbon;
 
 class PostSeeder extends Seeder
 {
     public function run()
     {
-        $dateDebut = now()->subDays(6); // Date de début, 6 jours avant aujourd'hui
+        $dateDebut = now()->subDays(6); 
 
         $postsData = [
             [
