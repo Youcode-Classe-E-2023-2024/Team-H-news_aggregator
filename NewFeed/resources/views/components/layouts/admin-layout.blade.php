@@ -38,6 +38,8 @@
     <link href="{{ asset('css/dark/apps/notes.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/light/apps/notes.css') }}" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="{{asset('css/pagination.css')}}">
+
 </head>
 
 <body class="layout-boxed">

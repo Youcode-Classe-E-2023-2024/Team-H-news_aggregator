@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="" />
+    <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/.env" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/app/Models/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Models/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/public/css/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/css/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/admin-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/admin-layout.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +206,7 @@
       <workItem from="1708686293591" duration="6153000" />
       <workItem from="1708699123624" duration="178000" />
       <workItem from="1708699309721" duration="2330000" />
-      <workItem from="1708774054150" duration="29835000" />
+      <workItem from="1708774054150" duration="41128000" />
     </task>
     <servers />
   </component>
