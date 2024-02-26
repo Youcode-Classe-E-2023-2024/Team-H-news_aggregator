@@ -34,10 +34,52 @@
     <link href="{{ asset('css/light/dashboard/dash_1.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/dark/dashboard/dash_1.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        const token = localStorage.getItem('token');
+
+        if(!token){
+            window.location.href = '/login';
+        }else{
+            console.log('token');
+            axios.get('api/get-user', {
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                }
+            })
+            .then((response) => {
+                var user = response.data.user;
+                console.log(user.roles);
+                if (user.roles != 'admin') {
+                    window.location.href = '/';
+                }else{
+                    console.log(user.roles);
+                    console.log(user)
+                    document.getElementById('user').innerHTML =user.name;
+                    document.getElementById('roles').innerHTML =user.roles;
+
+                }
+
+            })
+            .catch((error) => {
+                window.location.href = '/login';
+
+            });
+
+        }
+
+
+    </script>
 
     <link href="{{ asset('css/dark/apps/notes.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/light/apps/notes.css') }}" rel="stylesheet" type="text/css" />
 
+<<<<<<< HEAD
+    <link rel="stylesheet" href="{{asset('css/pagination.css')}}">
+
+=======
+>>>>>>> 4cd14aaba2b9571e120af2ca68cc52066d289175
 </head>
 
 <body class="layout-boxed">

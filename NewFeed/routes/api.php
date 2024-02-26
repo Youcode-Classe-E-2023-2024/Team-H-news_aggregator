@@ -18,10 +18,14 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\DashboardController;
 
-Route::get('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
- 
+
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
+    Route::get('/test',function (){
+        return 'tes';
+    });
 });

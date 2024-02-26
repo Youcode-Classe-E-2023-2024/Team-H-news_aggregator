@@ -15,20 +15,21 @@
 
         <div class="p-5 bg-white md:flex-1">
             <h3 class="my-4 text-2xl font-semibold text-gray-700 text-center">Reset Password</h3>
-            <form action="#" class="flex flex-col space-y-5">
-                <div class="flex flex-col space-y-1">
-                    <label for="email" class="text-sm font-semibold text-gray-500">Email Address</label>
-                    <input type="email" id="email" autofocus class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"/>
-                </div>
+            <form action="{{route('reset_password')}}" method="POST" class="flex flex-col space-y-5">
+                @csrf
+
+                <input type="text" name="token_email" class=" hidden" value="{{$token}}">
+                <input type="text" name="email" class=" hidden" value="{{$email}}">
+
                 <div class="flex flex-col space-y-1">
                     <div class="flex items-center justify-between">
                         <label for="password" class="text-sm font-semibold text-gray-500">New Password </label>
                     </div>
-                    <input type="password" id="password" class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"/>
+                    <input type="password" id="password" name="password" class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"/>
                 </div>
                 <div class="flex flex-col space-y-1">
                     <div class="flex items-center justify-between">
-                        <label for="confirme-password" class="text-sm font-semibold text-gray-500">Confirm Password</label>
+                        <label for="confirm-password" class="text-sm font-semibold text-gray-500">Confirm Password</label>
 
                     </div>
                     <input
