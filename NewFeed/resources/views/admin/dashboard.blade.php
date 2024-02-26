@@ -190,7 +190,7 @@
                         <div class="widget widget-chart-three">
                             <div class="widget-heading">
                                 <div class="">
-                                    <h5 class="">Unique Visitors</h5>
+                                    <h5 class="">Nombre de registres par les six derniers jours:</h5>
                                 </div>
 
                                 <div class="task-action">
@@ -830,7 +830,6 @@
 
                 const jours = Object.keys(data);
                 const nombres = Object.values(data);
-                var vari = 'dld';
 
                 console.log(jours);
                 console.log(nombres);
