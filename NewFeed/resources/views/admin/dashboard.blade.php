@@ -35,10 +35,12 @@
                             </div>
                             <div class="w-chart">
                                 <div class="w-chart-section">
+
                                     <div class="w-detail">
-                                        <p class="w-title">Total Visits</p>
-                                        <p class="w-stats">423,964</p>
+                                        <p class="w-title">Total Des Utilisateurs</p>
+                                        <p class="w-stats" id="nombreUtilisateurs"></p>
                                     </div>
+
                                     <div class="w-chart-render-one">
                                         <div id="total-users"></div>
                                     </div>
@@ -824,22 +826,21 @@
 
 
     <script>
-         fetch('/api/donnees-graphique')
-            .then(response => response.json())
+
+        fetch('/api/nbrUser')
+            .then(response => {
+
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Erreur lors de la récupération des données');
+            })
             .then(data => {
-
-                const jours = Object.keys(data);
-                const nombres = Object.values(data);
-
-                console.log(jours);
-                console.log(nombres);
+                document.getElementById('nombreUtilisateurs').textContent = data.nombre_utilisateurs;
             })
             .catch(error => {
-                console.error('Erreur lors de la récupération des données :', error);
-                console.log("test...........................");
+                console.error(error);
             });
-
-
     </script>
 
 </x-layouts.admin-layout >
