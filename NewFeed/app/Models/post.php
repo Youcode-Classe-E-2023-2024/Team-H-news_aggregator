@@ -5,14 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class fluxRSS extends Model
+class post extends Model
 {
     use HasFactory;
 
-    protected $table = 'flex_rss';
+    protected $table = 'post';
 
     protected $fillable = [
-        'name',
+        'title',
         'url',
+        'description',
+        'image',
+        'category_id'
     ];
 }
