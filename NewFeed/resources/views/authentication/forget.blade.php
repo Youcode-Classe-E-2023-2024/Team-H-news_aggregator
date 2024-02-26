@@ -21,10 +21,12 @@
         </div>
         <div class="p-5 bg-white md:flex-1">
                         <h3 class="my-4 text-2xl text-center font-semibold text-gray-700">Réinitialisation du mot de passe</h3>
-                        <form action="#" class="flex flex-col space-y-5">
+                        <form action="{{route('send_email')}}" method="POST" class="flex flex-col space-y-5">
+                            @csrf
                             <div class="flex flex-col space-y-1">
                                 <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
                                 <input
+                                    name="email"
                                     type="email"
                                     id="email"
                                     autofocus
