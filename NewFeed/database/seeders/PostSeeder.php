@@ -10,7 +10,7 @@ class PostSeeder extends Seeder
 {
     public function run()
     {
-        $dateDebut = now()->subDays(6); 
+        $dateDebut = now()->subDays(6);
 
         $postsData = [
             [
