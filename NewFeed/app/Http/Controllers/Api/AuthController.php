@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
+
+
 
 class AuthController extends Controller
 {
@@ -19,11 +22,14 @@ class AuthController extends Controller
      */
     public function register(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required|min:4',
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|min:6',
             'email' => 'required|email',
-            'password' => 'required|min:8',
+            'password' => 'required|min:6|confirmed',
         ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
  
         $user = User::create([
             'name' => $request->name,
@@ -32,8 +38,9 @@ class AuthController extends Controller
         ]);
  
         $token = $user->createToken('Laravel-10-Passport-Auth')->accessToken;
- 
-        return response()->json(['token' => $token], 200);
+        return redirect()->back()->with('message', 'Your have been successfully registered');
+
+        // return response()->json(['token' => $token], 200);
     }
  
     /**
