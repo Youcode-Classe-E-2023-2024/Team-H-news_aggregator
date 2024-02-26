@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/NewFeed/app/Mail/Send_email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/public/images/heart1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/public/images/heart2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/public/js/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/dsplay_users.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/resources/views/authentication/Send_email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/.env" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/Api/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/addSource.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/showSources.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/authentication/forget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/authentication/forget.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/authentication/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/authentication/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/client/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/client/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/admin-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/admin-layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/client-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/client-layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/components/news-card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/components/news-card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/components/news-card2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/components/news-card2.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/partials/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +40,13 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -154,6 +182,8 @@
       <path value="$PROJECT_DIR$/NewFeed/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/NewFeed/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/NewFeed/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/simplepie/simplepie" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/willvincent/feeds" />
     </include_path>
   </component>
   <component name="ProjectId" id="2clVjr7EiHJUEfchF1YitnLE1m6" />
@@ -166,6 +196,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Apache24/htdocs/Team-H-news_aggregator&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -191,7 +222,8 @@
       <updated>1708686291424</updated>
       <workItem from="1708686293591" duration="6153000" />
       <workItem from="1708699123624" duration="178000" />
-      <workItem from="1708699309721" duration="1650000" />
+      <workItem from="1708699309721" duration="2330000" />
+      <workItem from="1708774054150" duration="41807000" />
     </task>
     <servers />
   </component>

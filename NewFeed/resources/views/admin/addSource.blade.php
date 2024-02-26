@@ -1,105 +1,59 @@
-<x-layouts.admin-layout title="Dashboard">
+<x-layouts.admin-layout title="Add-Ressource" >
+
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
-            <div class="container mx-auto align-self-center">
 
-                <div class="row">
-        
-                    <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-12 d-flex flex-column align-self-center mx-auto">
-                        <div class="card mt-3 mb-3">
-                            <div class="card-body">
-        
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    @foreach($errors->all() as $error)
+                        <p class="text-black">{{ $error }}</p>
+                    @endforeach
+                </div>
+            @endif
+            @if(session('error'))
+                <div class="alert alert danger"> {{ session('error') }} </div>
+            @endif
+            <div class="middle-content container-xxl p-0">
+
+                <div class="row layout-top-spacing">
+
+                    <div class="col-xxl-12 col-xl-8 col-lg-8 col-md-7 mt-xxl-0 mt-4">
+                        <div class="widget-content widget-content-area ecommerce-create-section p-10">
+                            <form method="post" action="{{route('addRss.store')}}">
+                                @csrf
                                 <div class="row">
-                                    <div class="col-md-12 mb-3">
-        
-                                        <h2>Flux Rss</h2>
-                                        <p>Enter your Resource URL</p>
+
+                                    <div class="col-xxl-12 col-md-6 mb-4">
+                                        <label for="proCode">Rss link</label>
+                                        <input type="text" class="form-control" name="url" >
                                     </div>
-                                    <div class="col-12 mb-4">
-                                        <form action="{{route('addRss.index')}}" method="post">
-                                            @csrf
-                                            <div class="col-md-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Name</label>
-                                                    <input type="text" class="form-control add-billing-address-input" name="name" value="{{ old('name') }}">
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-md-12">
-                                                <div class="mb-3">
-                                                    <label class="form-label">URL</label>
-                                                    <input type="text" class="form-control" name="url" value="{{ old('url') }}">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="mb-3">
-                                                    <div class="form-check form-check-primary form-check-inline">
-                                                        <input class="form-check-input me-3" type="checkbox" id="form-check-default" name="agreement">
-                                                        <label class="form-check-label" for="form-check-default">
-                                                            I agree the <a href="#" class="text-primary">Terms and Conditions</a>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-12">
-                                                <div class="mb-4">
-                                                    <button class="btn btn-secondary w-100">Submit</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <div class="">
-                                            <div class="seperator">
-                                                <hr>
-                                                <div class="seperator-text"> <span>Or continue with</span></div>
-                                            </div>
-                                        </div>
+
+                                    <div class="col-xxl-12 col-md-6 mb-4">
+                                        <label for="gender">Category</label>
+                                        <select class="form-select" aria-label="Default select example" name="category">
+                                            @foreach($categories as $categorie)
+                                                <option class="option" value="{{ $categorie['id'] }}" @if($categorie['id'] == 1) selected @endif>
+                                                    {{ $categorie['name'] }}
+                                                </option>
+                                            @endforeach
+                                        </select>
                                     </div>
-        
-                                    <div class="col-sm-4 col-12">
-                                        <div class="mb-4">
-                                            <button class="btn  btn-social-login w-100 ">
-                                                <img src="https://designreset.com/cork/html/src/assets/img/google-gmail.svg" alt="" class="img-fluid">
-                                                <span class="btn-text-inner">Google</span>
-                                            </button>
-                                        </div>
+
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-success w-100">Genrate Rss</button>
                                     </div>
-        
-                                    <div class="col-sm-4 col-12">
-                                        <div class="mb-4">
-                                            <button class="btn  btn-social-login w-100">
-                                                <img src="https://designreset.com/cork/html/src/assets/img/github-icon.svg" alt="" class="img-fluid">
-                                                <span class="btn-text-inner">Github</span>
-                                            </button>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-sm-4 col-12">
-                                        <div class="mb-4">
-                                            <button class="btn  btn-social-login w-100">
-                                                <img src="https://designreset.com/cork/html/src/assets/img/twitter.svg" alt="" class="img-fluid">
-                                                <span class="btn-text-inner">Twitter</span>
-                                            </button>
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-12">
-                                        <div class="text-center">
-                                            <p class="mb-0">Already have an account ? <a href="javascript:void(0);" class="text-warning">Sign in</a></p>
-                                        </div>
-                                    </div>
-        
                                 </div>
-        
-                            </div>
+                            </form>
+
                         </div>
                     </div>
-        
+
+
                 </div>
-        
+
             </div>
+
         </div>
+
     </div>
-    
-    </div>
-</x-layouts.admin-layout>
+</x-layouts.admin-layout >
