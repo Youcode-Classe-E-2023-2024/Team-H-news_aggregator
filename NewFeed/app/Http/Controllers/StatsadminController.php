@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class StatsadminController extends Controller
 {
@@ -22,7 +23,6 @@ class StatsadminController extends Controller
     }
 
 
-// Méthode dans votre contrôleur
     public function tendanceEnregistrementUtilisateur()
     {
         $dateDebut = now()->subDays(5);
@@ -47,7 +47,7 @@ class StatsadminController extends Controller
 
     public function fetchPopularNewsCategories()
     {
-        $categories = Article::select('category', \DB::raw('COUNT(*) as count'))
+        $categories = Post::select('category', DB::raw('COUNT(*) as count'))
             ->groupBy('category')
             ->orderBy('count', 'desc')
             ->take(5)
@@ -55,6 +55,8 @@ class StatsadminController extends Controller
 
         return response()->json($categories);
     }
+
+
 
     public function topTrendingNews()
     {
