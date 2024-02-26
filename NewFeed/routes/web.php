@@ -4,6 +4,8 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FluxRSSController;
+use App\Http\Controllers\test;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,17 +42,20 @@ Route::post('/reset/password', [AuthController::class, 'reset_password'])->name(
 
 Route::get('/',function(){
     return view('client.home');
-});
+})->name('home');
 
 Route::get('/dashboard',function(){
     return view('admin.dashboard');
 })->name('dashboard');
+
 Route::post('/register/send', [AuthController::class, 'register'])->name('register.send');
 Route::post('/login/send', [AuthController::class, 'login'])->name('login.send');
 
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
 });
+
+
 
 /**--- fati ----**/
 Route::get('/categories',[CategoriesController::class,'index'])->name('categories');
@@ -59,6 +64,8 @@ Route::put('/categories',[CategoriesController::class,'update'])->name('update-c
 Route::delete('/categories',[CategoriesController::class,'delete'])->name('delete-category');
 
 /**--- fati ----**/
+
+
 
 /** ---- Mohammed ---- **/
 
@@ -70,6 +77,8 @@ Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index')
 // /** ---- Mohammed ---- **/
 
 
+
+
 /*======================  mohammed elghanam  =======================*/
 Route::get('/display',function(){
     return view('admin.dsplay_users');
@@ -77,3 +86,6 @@ Route::get('/display',function(){
 
 /*======================  mohammed elghanam  =======================*/
 
+Route::get('/dashboard',function(){
+    return view('admin.dashboard');
+})->name('dashboard');

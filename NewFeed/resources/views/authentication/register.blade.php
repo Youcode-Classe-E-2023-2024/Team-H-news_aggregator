@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
     @vite('resources/css/app.css')
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -18,57 +19,53 @@
             class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md">
 
             <div class="p-5 bg-white md:flex-1">
-                @if(session('message'))
-                <div id="message" style="display: none" class="text-green rounded bg-green-300 p-4 ">
-                    {{session('message')}}
-                </div>
-                @endif
+             
                 
                 <h3 class="my-4 text-2xl font-semibold text-gray-700">News account </h3>
-                <form action="{{ route('register.send') }}" method="POST" class="flex flex-col space-y-5">
-                    @csrf
-                    <div class="flex flex-col space-y-1">
-                        @if (isset($errors) && $errors->has('name'))
-                            <span class="text-red-500">{{ $errors->first('name') }}</span>
-                        @endif
-                        <label for="name" class="text-sm font-semibold text-gray-500">Name</label>
-                        <input type="text" id="name" name="name" autofocus
+                    <form id="registerForm" class="flex flex-col space-y-5">
+                        @csrf
+                        <div class="flex flex-col space-y-1">
+                           
+                            
+                            <label for="name" class="text-sm font-semibold text-gray-500">Name</label>
+                            <input type="text" id="name" name="name" autofocus
                             class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
-                    </div>
-                    <div class="flex flex-col space-y-1">
-                        @if (isset($errors) && $errors->has('email'))
-                            <span class="text-red-500">{{ $errors->first('email') }}</span>
-                        @endif
-                        <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
-                        <input type="email" id="email" name="email" autofocus
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
-                    </div>
-                    <div class="flex flex-col space-y-1">
-                        @if (isset($errors) && $errors->has('password'))
-                            <span class="text-red-500">{{ $errors->first('password') }}</span>
-                        @endif
-                        <div class="flex items-center justify-between">
-                            <label for="password" class="text-sm font-semibold text-gray-500">Password</label>
+                            <span id="errorContainerName" class="text-red-500"></span>
                         </div>
-                        <input type="password" id="password" name="password"
+                        <div class="flex flex-col space-y-1">
+                           
+                            <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
+                            <input type="email" id="email" name="email" autofocus
                             class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
-                    </div>
-                    <div class="flex flex-col space-y-1">
-                        <div class="flex items-center justify-between">
-                            <label for="confirme-password" class="text-sm font-semibold text-gray-500">confirm
-                                password</label>
+                            <span id="errorContainerEmail" class="text-red-500"></span>
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                           
+                            <div class="flex items-center justify-between">
+                                <label for="password" class="text-sm font-semibold text-gray-500">Password</label>
+                            </div>
+                            <input type="password" id="password" name="password"
+                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            <span id="errorContainerPassword" class="text-red-500"></span>
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <div class="flex items-center justify-between">
+                                <label for="confirme_password" class="text-sm font-semibold text-gray-500">confirm
+                                    password</label>
+                                    
+                                </div>
+                                <input type="password" id="confirme_password" name="confirme_password"
+                                class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                            </div>
+                            <span id="errorContainerConfirme_password" class="text-red-500"></span>
 
+                        <div>
+                            <button type="submit"
+                                class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4">
+                                Register
+                            </button>
                         </div>
-                        <input type="password" id="password_confirmation" name="password_confirmation"
-                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
-                    </div>
-                    <div>
-                        <button type="submit"
-                            class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4">
-                            Register
-                        </button>
-                    </div>
-                </form>
+                    </form>
             </div>
             <div
                 class="p-4 py-6 text-white bg-blue-500 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
@@ -89,16 +86,71 @@
             </div>
         </div>
     </div>
+   
     <script>
-        var messageElement = document.getElementById('message');
-        messageElement.style.display = 'block';
-
-        // Set a timer to hide the message after 3000 milliseconds (3 seconds)
-        setTimeout(function() {
-            messageElement.style.display = 'none';
-        }, 3000);
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+         
+    
+            // Get form data
+            const formData = new FormData(event.target);
+    
+            // Clear previous error messages
+    
+            // Make Axios request to your register API
+            axios.post('{{ url('api/register') }}', formData)
+                .then(response => {
+                    // Assuming the API response contains a token
+                    const token = response.data.token;
+    
+                    // Store the token in local storage
+                    // localStorage.setItem('token', token);
+    
+                    // Redirect or perform other actions as needed
+                    window.location.href = '{{ route('login') }}';
+                })
+                .catch(error => {
+                   // Handle registration error, show an error message
+                   if (error.response && error.response.data && error.response.data.error) {
+                    const errors = error.response.data.error;
+                    
+                    console.log(errors);
+                    if(errors['name']){
+                        document.getElementById('errorContainerName').innerHTML = `<p>${errors['name']}</p>`;
+                        document.getElementById('name').classList.add('border-rose-600');
+                    }else{
+                        document.getElementById('errorContainerName').innerHTML = ``;
+                        document.getElementById('name').classList.remove('border-rose-600');
+                    }
+                    if(errors['email']){
+                        document.getElementById('errorContainerEmail').innerHTML = `<p>${errors['email']}</p>`;
+                        document.getElementById('email').classList.add('border-rose-600');
+                    }else{
+                        document.getElementById('errorContainerEmail').innerHTML = ``;
+                        document.getElementById('email').classList.remove('border-rose-600');
+                    }
+                    if(errors['password']){
+                        document.getElementById('errorContainerPassword').innerHTML = `<p>${errors['password']}</p>`;
+                        document.getElementById('password').classList.add('border-rose-600');
+                    }else{
+                        document.getElementById('errorContainerPassword').innerHTML = ``;
+                        document.getElementById('password').classList.remove('border-rose-600');
+                    }
+                    if(errors['confirme_password']){
+                        document.getElementById('errorContainerConfirme_password').innerHTML = `<p>${errors['confirme_password']}</p>`;
+                        document.getElementById('confirme_password').classList.add('border-rose-600');
+                    }else{
+                        document.getElementById('errorContainerConfirme_password').innerHTML = ``;
+                        document.getElementById('confirme_password').classList.remove('border-rose-600');
+                    }
+                   
+                        
+                    
+                } 
+                });
+        });
+        
     </script>
-
 </body>
 
 </html>
