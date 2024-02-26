@@ -45,8 +45,9 @@ Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
 });
 
-Route::get('/api/donnees-graphique', [StatsadminController::class, 'tendanceEnregistrementUtilisateur']);
 
+
+Route::get('/api/donnees-graphique', [StatsadminController::class, 'tendanceEnregistrementUtilisateur']);
 Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateurs']);
 
 
