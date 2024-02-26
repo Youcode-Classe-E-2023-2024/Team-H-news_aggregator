@@ -14,7 +14,7 @@
 
 <body>
     {{--  login --}}
-  
+
 
 
 
@@ -84,11 +84,13 @@
                     const data = response.data;
                     localStorage.setItem('token', data.token);
                     window.location.href = '/dashboard';
-                  
+
 
                 })
                 .catch((error) => {
-                    console.error(error);
+                    var errors=error.response.data.error;
+
+                    document.getElementById('errorContainer').innerHTML = errors;
                 });
 
         }

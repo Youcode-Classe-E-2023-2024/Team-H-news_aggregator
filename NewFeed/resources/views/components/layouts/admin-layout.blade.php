@@ -40,35 +40,36 @@
         const token = localStorage.getItem('token');
 
         if(!token){
-            window.location.href = '/login'; 
+            window.location.href = '/login';
         }else{
             console.log('token');
             axios.get('api/get-user', {
-    headers: {
-        'Authorization': 'Bearer ' + token,
-    }
-})
-.then((response) => {
-    var user = response.data.user;
-    console.log(user.roles);
-    if (user.roles != 'admin') {
-        window.location.href = '/'; 
-    }else{
-        console.log(user.roles);
-        console.log(user)
-        document.getElementById('user').innerHTML =user.name;
-        document.getElementById('roles').innerHTML =user.roles;
-    
-    }
-    
-})
-.catch((error) => {
-    console.error(error);
-});
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                }
+            })
+            .then((response) => {
+                var user = response.data.user;
+                console.log(user.roles);
+                if (user.roles != 'admin') {
+                    window.location.href = '/';
+                }else{
+                    console.log(user.roles);
+                    console.log(user)
+                    document.getElementById('user').innerHTML =user.name;
+                    document.getElementById('roles').innerHTML =user.roles;
+
+                }
+
+            })
+            .catch((error) => {
+                window.location.href = '/login';
+
+            });
 
         }
 
-        
+
     </script>
 
     <link href="{{ asset('css/dark/apps/notes.css') }}" rel="stylesheet" type="text/css" />

@@ -22,7 +22,10 @@ use App\Http\Controllers\DashboardController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
- 
+
 Route::middleware('auth:api')->group(function () {
-    Route::get('get-user', [AuthController::class, 'userInfo']);  
+    Route::get('get-user', [AuthController::class, 'userInfo']);
+    Route::get('/test',function (){
+        return 'tes';
     });
+});
