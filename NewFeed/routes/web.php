@@ -47,4 +47,6 @@ Route::middleware('auth:api')->group(function () {
 
 Route::get('/api/donnees-graphique', [StatsadminController::class, 'tendanceEnregistrementUtilisateur']);
 
-//Route::get('/api/popular-news-categories', [StatsadminController::class, 'fetchPopularNewsCategories']);
+Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateurs']);
+
+
