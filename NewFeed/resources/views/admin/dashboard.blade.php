@@ -822,21 +822,25 @@
     </div>
 
 
-    
+
     <script>
-        fetch('/api/donnees-graphique')
+        await fetch('/api/donnees-graphique')
             .then(response => response.json())
             .then(data => {
 
                 const jours = Object.keys(data);
                 const nombres = Object.values(data);
-
-
+                var vari = 'dld';
+               // console.log('hello');
+                console.log(jours);
+                console.log(nombres);
             })
             .catch(error => {
                 console.error('Erreur lors de la récupération des données :', error);
                 console.log("test...........................");
             });
+
+
     </script>
 
 </x-layouts.admin-layout >
