@@ -22,6 +22,7 @@ class StatsadminController extends Controller
     }
 
 
+// Méthode dans votre contrôleur
     public function tendanceEnregistrementUtilisateur()
     {
         $dateDebut = now()->subDays(5);
@@ -43,12 +44,13 @@ class StatsadminController extends Controller
 
 
 
+
     public function fetchPopularNewsCategories()
     {
         $categories = Article::select('category', \DB::raw('COUNT(*) as count'))
             ->groupBy('category')
             ->orderBy('count', 'desc')
-            ->take(5) 
+            ->take(5)
             ->get();
 
         return response()->json($categories);
