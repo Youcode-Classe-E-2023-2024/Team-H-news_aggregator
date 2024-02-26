@@ -822,8 +822,7 @@
     </div>
 
 
-
-    <!-- Dans votre vue -->
+    
     <script>
         fetch('/api/donnees-graphique')
             .then(response => response.json())
@@ -836,6 +835,7 @@
             })
             .catch(error => {
                 console.error('Erreur lors de la récupération des données :', error);
+                console.log("test...........................");
             });
     </script>
 
