@@ -20,10 +20,9 @@ class UsersTableSeeder extends Seeder
         $dateDebut = Carbon::now()->subDays(5);
 
         for ($i = 0; $i < 20; $i++) {
-            // Générer une adresse e-mail unique
+
             $email = 'user' . $i . '_' . Str::random(5) . '@example.com';
 
-            // Générer une date de création aléatoire entre la date de début et maintenant
             $dateCreation = Carbon::instance($dateDebut)->addDays(rand(0, 5))->addHours(rand(0, 23))->addMinutes(rand(0, 59))->addSeconds(rand(0, 59));
 
             DB::table('users')->insert([
