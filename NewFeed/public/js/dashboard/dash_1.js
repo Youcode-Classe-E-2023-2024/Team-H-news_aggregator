@@ -276,13 +276,13 @@ window.addEventListener("load", function(){
       },
       series: [{
           name: 'Direct',
-          data: [90, 90, 60, 66, 56, 63]//[1, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
+          data: [1, 44, 55, 57, 56, 61]//[1, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
       }, {
           name: 'Organic',
-          data: /*nombres */[91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
+          data: nombres
       }],
       xaxis: {
-          categories:/* jours*/['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          categories:  jours//['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       },
       fill: {
         type: 'gradient',
@@ -722,103 +722,112 @@ window.addEventListener("load", function(){
         ===================================
       */
 
-      var d_1options1 = {
-      chart: {
-          height: 350,
-          type: 'bar',
-          toolbar: {
-            show: false,
-          }
-      },
-      colors: ['#622bd7', '#ffbb44'],
-      plotOptions: {
-          bar: {
-              horizontal: false,
-              columnWidth: '55%',
-              endingShape: 'rounded',
-              borderRadius: 10,
+        var d_1options1 = {
+            chart: {
+                height: 350,
+                type: 'bar',
+                toolbar: {
+                    show: false,
+                }
+            },
+            colors: ['#622bd7', '#ffbb44'],
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded',
+                    borderRadius: 10,
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                position: 'bottom',
+                horizontalAlign: 'center',
+                fontSize: '14px',
+                markers: {
+                    width: 10,
+                    height: 10,
+                    offsetX: -5,
+                    offsetY: 0
+                },
+                itemMargin: {
+                    horizontal: 10,
+                    vertical: 8
+                }
+            },
+            grid: {
+                borderColor: '#e0e6ed',
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            series: [{
+                name: 'Nombre de registre',
+                data: [10, 10, 10, 10, 10, 10] //[58, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
+            }, {
+                name: 'Organic',
+                data: []
+            }],
+            xaxis: {
+                categories: []
+            },
+            fill: {
+                type: 'gradient',
+                gradient: {
+                    shade: 'light',
+                    type: 'vertical',
+                    shadeIntensity: 0.3,
+                    inverseColors: false,
+                    opacityFrom: 1,
+                    opacityTo: 0.8,
+                    stops: [0, 100]
+                }
+            },
+            tooltip: {
+                marker: {
+                    show: false,
+                },
+                y: {
+                    formatter: function (val) {
+                        return val;
+                    }
+                }
+            },
+            responsive: [
+                {
+                    breakpoint: 767,
+                    options: {
+                        plotOptions: {
+                            bar: {
+                                borderRadius: 0,
+                                columnWidth: "50%"
+                            }
+                        }
+                    }
+                },
+            ]
+        };
 
-          },
-      },
-      dataLabels: {
-          enabled: false
-      },
-      legend: {
-          position: 'bottom',
-          horizontalAlign: 'center',
-          fontSize: '14px',
-          markers: {
-              width: 10,
-              height: 10,
-              offsetX: -5,
-              offsetY: 0
-          },
-          itemMargin: {
-              horizontal: 10,
-              vertical: 8
-          }
-      },
-      grid: {
-        borderColor: '#e0e6ed',
-      },
-      stroke: {
-          show: true,
-          width: 2,
-          colors: ['transparent']
-      },
-      series: [{
-          name: 'Direct',
-          data: [58, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
-      }, {
-          name: 'Organic',
-          data: [91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
-      }],
-      xaxis: {
-          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      },
-      fill: {
-        type: 'gradient',
-        gradient: {
-          shade: Theme,
-          type: 'vertical',
-          shadeIntensity: 0.3,
-          inverseColors: false,
-          opacityFrom: 1,
-          opacityTo: 0.8,
-          stops: [0, 100]
-        }
-      },
-      tooltip: {
-          marker : {
-              show: false,
-          },
-          theme: Theme,
-          y: {
-              formatter: function (val) {
-                  return val
-              }
-          }
-      },
-      responsive: [
-          {
-              breakpoint: 767,
-              options: {
-                  plotOptions: {
-                      bar: {
-                          borderRadius: 0,
-                          columnWidth: "50%"
-                      }
-                  }
-              }
-          },
-      ]
-      }
+// Fetching data from API and updating the series and xaxis categories
+        fetch('/api/donnees-graphique')
+            .then(response => response.json())
+            .then(data => {
+                const jours = Object.keys(data);
+                const nombres = Object.values(data);
 
-      /*
-        ==============================
-            Statistics | Options
-        ==============================
-      */
+                d_1options1.series[1].data = nombres;
+                d_1options1.xaxis.categories = jours.map(date => new Date(date)); // Convertir les chaînes de caractères en objets Date
+            });
+
+        /*
+          ==============================
+              Statistics | Options
+          ==============================
+        */
 
       // Followers
 
