@@ -831,9 +831,11 @@
                 const jours = Object.keys(data);
                 const nombres = Object.values(data);
                 var vari = 'dld';
-               // console.log('hello');
+
                 console.log(jours);
                 console.log(nombres);
+                localStorage.setItem('nombres', JSON.stringify(nombres));
+                localStorage.setItem('jours', JSON.stringify(jours));
             })
             .catch(error => {
                 console.error('Erreur lors de la récupération des données :', error);
