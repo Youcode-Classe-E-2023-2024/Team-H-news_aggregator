@@ -1,5 +1,3 @@
-
-
 <x-layouts.admin-layout title="Dashboard">
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
