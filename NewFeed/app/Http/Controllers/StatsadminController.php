@@ -13,7 +13,7 @@ class StatsadminController extends Controller
     public function nombreUtilisateurs()
     {
         $nombreUtilisateurs = User::count();
-        return $nombreUtilisateurs;
+        return response()->json(['nombre_utilisateurs' => $nombreUtilisateurs]);
     }
 
     public function nombrePublications()
