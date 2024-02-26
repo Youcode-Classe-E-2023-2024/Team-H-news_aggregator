@@ -820,17 +820,24 @@
 
         <!--  END FOOTER  -->
     </div>
-    <canvas id="graphique"></canvas>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <canvas id="newsCategoriesChart" width="400" height="400"></canvas>
 
 
-    <script src="{{ asset('js/Chart1.js') }}"></script>
-    <script src="{{ asset('js/Chart1.js') }}"></script>
+
+    <!-- Dans votre vue -->
+    <script>
+        fetch('/api/donnees-graphique')
+            .then(response => response.json())
+            .then(data => {
+
+                const jours = Object.keys(data);
+                const nombres = Object.values(data);
 
 
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des données :', error);
+            });
+    </script>
 
 </x-layouts.admin-layout >
 
