@@ -1,4 +1,6 @@
-<x-layouts.admin-layout title="Add-Ressource" >
+
+
+<x-layouts.admin-layout title="Dashboard">
     <div id="content" class="main-content">
         <div class="layout-px-spacing">
             <div class="middle-content container-xxl p-0">

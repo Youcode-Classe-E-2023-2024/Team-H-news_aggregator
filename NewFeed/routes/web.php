@@ -28,9 +28,15 @@ Route::get('/forget', function () {
     return view('authentication.forget');
 })->name('forget');
 
-Route::get('/reset/{token}',function (){
-    return view('authentication.reset');
-});
+Route::post('/forget/send', [AuthController::class, 'send_email'])->name('send_email');
+Route::get('/reset/{email}/{token}', [AuthController::class, 'reset'])->name('reset');
+Route::post('/reset/password', [AuthController::class, 'reset_password'])->name('reset_password');
+
+
+
+// Route::get('/reset/{token}',function (){
+//     return view('authentication.reset');
+// });
 
 Route::get('/',function(){
     return view('client.home');
@@ -63,4 +69,12 @@ Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index')
 Route::post('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.send');
 
 /** ---- Mohammed ---- **/
+
+
+/*======================  mohammed elghanam  =======================*/
+Route::get('/display',function(){
+    return view('admin.dsplay_users');
+});
+
+/*======================  mohammed elghanam  =======================*/
 

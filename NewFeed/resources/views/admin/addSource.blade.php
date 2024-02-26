@@ -1,3 +1,4 @@
+
 <x-layouts.admin-layout title="Add-Ressource" >
 
     <div id="content" class="main-content">
@@ -42,6 +43,7 @@
                                     <div class="col-sm-12">
                                         <button class="btn btn-success w-100">Genrate Rss</button>
                                     </div>
+
                                 </div>
                             </form>
 
@@ -51,9 +53,11 @@
 
                 </div>
 
-            </div>
 
-        </div>
+                            </div>
+                        </div>
 
-    </div>
-</x-layouts.admin-layout >
+                </div>
+
+
+</x-layouts.admin-layout>
