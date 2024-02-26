@@ -829,7 +829,6 @@
 
         fetch('/api/nbrUser')
             .then(response => {
-
                 if (response.ok) {
                     return response.json();
                 }
