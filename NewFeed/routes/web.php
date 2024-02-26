@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FluxRSSController;
 use App\Http\Controllers\test;
@@ -65,6 +66,7 @@ Route::delete('/categories',[CategoriesController::class,'delete'])->name('delet
 
 /**--- fati ----**/
 
+Route::post('/home' ,[subscriberController::class, 'addSubscriber'])->name('add_subscriber');
 
 
 /** ---- Mohammed ---- **/
