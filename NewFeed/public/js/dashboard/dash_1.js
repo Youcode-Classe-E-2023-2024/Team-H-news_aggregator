@@ -276,10 +276,10 @@ window.addEventListener("load", function(){
       },
       series: [{
           name: 'Direct',
-          data: nombres //[44, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
+          data:nombres //[44, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
       }, {
           name: 'Organic',
-          data: nombres //[91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
+          data:nombres //[91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
       }],
       xaxis: {
           categories:jours //['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
