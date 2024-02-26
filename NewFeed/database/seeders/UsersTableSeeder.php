@@ -32,7 +32,7 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('password'),
                 'remember_token' => Str::random(10),
                 'created_at' => $dateCreation,
-                'updated_at' => $dateCreation, // Vous pouvez utiliser la même date de création pour la date de mise à jour
+                'updated_at' => $dateCreation,
             ]);
         }
     }
