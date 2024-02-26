@@ -6,26 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title}} </title>
     <link rel="stylesheet" href="{{asset('css/client.css')}}">
+    <script src="{{'js/client.js'}}"></script>
     @vite('resources/css/app.css')
-    <script>
-        function openSideBar(){
-            alert('eae')
-        }
 
-    function toggleSidebar() {
-        var sidebar = document.getElementById('sidebar');
-
-        if (sidebar.classList.contains('hidden')) {
-      // If the sidebar is hidden, replace 'hidden' with 'fixed' and 'translate-x-0'
-      sidebar.classList.remove('hidden', 'translate-x-minus-100');
-      sidebar.classList.add('fixed', 'translate-x-0');
-    } else {
-      // If the sidebar is fixed, replace 'fixed' with 'hidden' and 'translate-x-[-100%]'
-      sidebar.classList.remove('fixed', 'translate-x-0');
-      sidebar.classList.add('hidden', 'translate-x-minus-100');
-    }
-    }
-    </script>
 
 </head>
 <body class="">
@@ -38,8 +21,7 @@
             <span class="text-white">News</span> Forum
         </h1>
         <div class="flex justify-end gap-4 mr-2 text-white sm:text-md text-sm flex-1  " >
-            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">SignIn</span>
-            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">Sign Up</span>
+            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">Subscribe</span>
         </div>
     </div>
     <hr class="w-[100%] mx-auto" />
@@ -62,9 +44,9 @@
         <a href="/sports"><p class="uppercase sm:text-[35px] text-[28px] font-light cursor-pointer hover:text-[#fc444a] hover:tracking-[0.2em]">Sports</p></a>
         <a href="/about"><p class="uppercase sm:text-[35px] text-[28px] font-light cursor-pointer hover:text-[#fc444a] hover:tracking-[0.2em]">About</p></a>
     </ul>
-    
+
 </div>
-    
+
 
 <!-- ./header -->
 {{-- Main --}}
@@ -86,13 +68,13 @@
     </div>
 </div>
 
-    
+
 
 </div>
 
 <footer class='text-center text-white bg-black mt-3 mb-[1.3rem]'>
-       
-        <p class='text-center font-thin text-slate-500'>&#169;2023-2024 Designed and Developed by 
+
+        <p class='text-center font-thin text-slate-500'>&#169;2023-2024 Designed and Developed by
         <a href="https://github.com/kidusfmariam" target="_blank" class='text-[#fc444a]'> Team H</a>
         </p>
     </footer>
