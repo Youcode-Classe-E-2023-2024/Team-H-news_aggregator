@@ -24,8 +24,8 @@
                 <img src="{{asset('assets/img/profile-30.png')}}" alt="avatar">
             </div>
             <div class="profile-content">
-                <h6 class="">Shaun Park</h6>
-                <p class="">Project Leader</p>
+                <h6 class="" id='user'></h6>
+                <p class="" id='roles'></p>
             </div>
         </div>
     </div>

@@ -9,7 +9,6 @@
     @vite('resources/css/app.css')
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
 
-    </script>
 
 </head>
 
@@ -46,8 +45,10 @@
                         <li>
                             <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
                                 href="#" @click.prevent="selected = (selected === 'Dashboard' ? '':'Dashboard')"
-                                :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Dashboard') || (page === 'ecommerce' ||
-                                        page === 'analytics' || page === 'stocks') }">
+                                :class="{
+                                    'bg-graydark dark:bg-meta-4': (selected === 'Dashboard') || (page === 'ecommerce' ||
+                                        page === 'analytics' || page === 'stocks')
+                                }">
                                 <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -132,8 +133,11 @@
                         <li>
                             <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
                                 href="#" @click.prevent="selected = (selected === 'Forms' ? '':'Forms')"
-                                :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'Forms') || (page === 'formElements' ||
-                                        page === 'formLayout') }">
+                                :class="{
+                                    'bg-graydark dark:bg-meta-4': (selected === 'Forms') || (
+                                        page === 'formElements' ||
+                                        page === 'formLayout')
+                                }">
                                 <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -279,8 +283,11 @@
                             <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
                                 href="#"
                                 @click.prevent="selected = (selected === 'UiElements' ? '':'UiElements')"
-                                :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'UiElements') || (page === 'alerts' ||
-                                        page === 'buttons') }">
+                                :class="{
+                                    'bg-graydark dark:bg-meta-4': (selected === 'UiElements') || (
+                                        page === 'alerts' ||
+                                        page === 'buttons')
+                                }">
                                 <svg class="fill-current" width="18" height="19" viewBox="0 0 18 19"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_130_9807)">
@@ -339,8 +346,11 @@
                         <li>
                             <a class="group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4"
                                 href="#" @click.prevent="selected = (selected === 'AuthPages' ? '':'AuthPages')"
-                                :class="{ 'bg-graydark dark:bg-meta-4': (selected === 'AuthPages') || (page === 'register' ||
-                                        page === 'login') }">
+                                :class="{
+                                    'bg-graydark dark:bg-meta-4': (selected === 'AuthPages') || (
+                                        page === 'register' ||
+                                        page === 'login')
+                                }">
                                 <svg class="fill-current" width="18" height="19" viewBox="0 0 18 19"
                                     fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_130_9814)">

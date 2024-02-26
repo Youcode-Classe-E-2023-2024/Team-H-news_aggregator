@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\test;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\DashboardController;
@@ -38,5 +39,4 @@ Route::get('/',function(){
 Route::get('/dashboard',function(){
     return view('admin.dashboard');
 })->name('dashboard');
-Route::get('/dashboard/test',[DashboardController::class,'admin'])->name('test');
-     
+// Route::get('/dashboard',[DashboardController::class,'admin'])->name('dashboard')->middleware('auth:api');
