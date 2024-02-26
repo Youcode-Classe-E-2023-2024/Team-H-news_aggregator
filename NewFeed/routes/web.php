@@ -61,5 +61,13 @@ Route::post('/storeRss', [FluxRSSController::class, 'store'])->name('addRss.inde
 
 Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index');
 
-/** ---- Mohammed ---- **/
+// /** ---- Mohammed ---- **/
+
+
+/*======================  mohammed elghanam  =======================*/
+Route::get('/display',function(){
+    return view('admin.dsplay_users');
+});
+
+/*======================  mohammed elghanam  =======================*/
 
