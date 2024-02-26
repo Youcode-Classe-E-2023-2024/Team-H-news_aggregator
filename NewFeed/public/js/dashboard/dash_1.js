@@ -1,19 +1,7 @@
-window.addEventListener("load", function(){
-    fetch('/api/donnees-graphique')
-        .then(response => response.json())
-        .then(data => {
+const nombres = JSON.parse(localStorage.getItem('nombres'));
+const jours = JSON.parse(localStorage.getItem('jours'));
 
-            const jours = Object.keys(data);
-            const nombres = Object.values(data);
-            var vari = 'dld';
-            console.log('hello');
-            console.log(jours);
-            console.log(nombres);
-        })
-        .catch(error => {
-            console.error('Erreur lors de la récupération des données :', error);
-            console.log("test...........................");
-        });
+window.addEventListener("load", function(){
   try {
 
     getcorkThemeObject = localStorage.getItem("theme");
@@ -291,14 +279,13 @@ window.addEventListener("load", function(){
       },
       series: [{
           name: 'Direct',
-          data: [1, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
+          data: [58, 63, 60, 66, 56, 63]//[1, 44, 55, 57, 56, 61, 58, 63, 60, 66, 56, 63]
       }, {
           name: 'Organic',
-          data: [91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
+          data: nombres //[91, 76, 85, 101, 98, 87, 105, 91, 114, 94, 66, 70]
       }],
-
       xaxis: {
-          categories: [vari, 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          categories: jours//['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       },
       fill: {
         type: 'gradient',
@@ -1218,4 +1205,3 @@ window.addEventListener("load", function(){
   }
 
 })
-
