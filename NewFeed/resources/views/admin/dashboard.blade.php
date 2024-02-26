@@ -824,7 +824,7 @@
 
 
     <script>
-        await fetch('/api/donnees-graphique')
+         fetch('/api/donnees-graphique')
             .then(response => response.json())
             .then(data => {
 
@@ -834,8 +834,6 @@
 
                 console.log(jours);
                 console.log(nombres);
-                localStorage.setItem('nombres', JSON.stringify(nombres));
-                localStorage.setItem('jours', JSON.stringify(jours));
             })
             .catch(error => {
                 console.error('Erreur lors de la récupération des données :', error);
