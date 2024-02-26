@@ -1,6 +1,3 @@
-const nombres = JSON.parse(localStorage.getItem('nombres'));
-const jours = JSON.parse(localStorage.getItem('jours'));
-
 window.addEventListener("load", function(){
   try {
 
