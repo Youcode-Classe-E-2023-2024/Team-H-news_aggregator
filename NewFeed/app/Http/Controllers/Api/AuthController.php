@@ -88,5 +88,11 @@ class AuthController extends Controller
 
     }
 
+
+    public function show(){
+        $users = User::all();
+        return view('admin.dsplay_users', compact('users'));
+    }
+
     /*======================  mohammed elghanam  =======================*/
 }
