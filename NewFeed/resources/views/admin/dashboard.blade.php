@@ -529,8 +529,8 @@
                                                 </svg>
                                             </div>
                                             <div class="">
-                                                <p class="w-value">31.6K</p>
-                                                <h5 class="">Followers</h5>
+                                                <p id="nombreUtilisateurs" class="w-value"></p>
+                                                <h5 class="">Utilisateur</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -560,8 +560,8 @@
                                                 </svg>
                                             </div>
                                             <div class="">
-                                                <p class="w-value">1,900</p>
-                                                <h5 class="">Referral</h5>
+                                                <p id="nombrePosts" class="w-value"></p>
+                                                <h5 class="">Post</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -818,6 +818,29 @@
         </div>
         <!--  END FOOTER  -->
     </div>
+
+    <script>
+
+        fetch('/api/nbrUser')
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Erreur lors de la récupération des données');
+            })
+            .then(data => {
+                document.getElementById('nombreUtilisateurs').textContent = data.nombre_utilisateurs;
+                document.getElementById('nombrePosts').textContent = data.nombre_posts;
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+
+
+    </script>
+
+
 </x-layouts.admin-layout >
 
 
