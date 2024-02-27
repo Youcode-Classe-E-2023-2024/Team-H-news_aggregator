@@ -6,32 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title}} </title>
     <link rel="stylesheet" href="{{asset('css/client.css')}}">
-<<<<<<< HEAD
     @vite('resources/css/app.css')
     <script>
-        function openSideBar(){
-            alert('eae')
-        }
 
-    function toggleSidebar() {
-        var sidebar = document.getElementById('sidebar');
 
-        if (sidebar.classList.contains('hidden')) {
-      // If the sidebar is hidden, replace 'hidden' with 'fixed' and 'translate-x-0'
-      sidebar.classList.remove('hidden', 'translate-x-minus-100');
-      sidebar.classList.add('fixed', 'translate-x-0');
-    } else {
-      // If the sidebar is fixed, replace 'fixed' with 'hidden' and 'translate-x-[-100%]'
-      sidebar.classList.remove('fixed', 'translate-x-0');
-      sidebar.classList.add('hidden', 'translate-x-minus-100');
-    }
-    }
+
     </script>
-=======
     <script src="{{'js/client.js'}}"></script>
     @vite('resources/css/app.css')
 
->>>>>>> 4cd14aaba2b9571e120af2ca68cc52066d289175
 
 </head>
 <body class="">
@@ -44,12 +27,8 @@
             <span class="text-white">News</span> Forum
         </h1>
         <div class="flex justify-end gap-4 mr-2 text-white sm:text-md text-sm flex-1  " >
-<<<<<<< HEAD
-            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">SignIn</span>
-            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">Sign Up</span>
-=======
+
             <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">Subscribe</span>
->>>>>>> 4cd14aaba2b9571e120af2ca68cc52066d289175
         </div>
     </div>
     <hr class="w-[100%] mx-auto" />
@@ -72,15 +51,12 @@
         <a href="/sports"><p class="uppercase sm:text-[35px] text-[28px] font-light cursor-pointer hover:text-[#fc444a] hover:tracking-[0.2em]">Sports</p></a>
         <a href="/about"><p class="uppercase sm:text-[35px] text-[28px] font-light cursor-pointer hover:text-[#fc444a] hover:tracking-[0.2em]">About</p></a>
     </ul>
-<<<<<<< HEAD
-    
-</div>
-    
-=======
 
 </div>
 
->>>>>>> 4cd14aaba2b9571e120af2ca68cc52066d289175
+
+</div>
+
 
 <!-- ./header -->
 {{-- Main --}}
@@ -102,22 +78,15 @@
     </div>
 </div>
 
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 4cd14aaba2b9571e120af2ca68cc52066d289175
 
 </div>
 
 <footer class='text-center text-white bg-black mt-3 mb-[1.3rem]'>
-<<<<<<< HEAD
-       
-        <p class='text-center font-thin text-slate-500'>&#169;2023-2024 Designed and Developed by 
-=======
 
         <p class='text-center font-thin text-slate-500'>&#169;2023-2024 Designed and Developed by
->>>>>>> 4cd14aaba2b9571e120af2ca68cc52066d289175
+
+        <p class='text-center font-thin text-slate-500'>&#169;2023-2024 Designed and Developed by
         <a href="https://github.com/kidusfmariam" target="_blank" class='text-[#fc444a]'> Team H</a>
         </p>
     </footer>
@@ -126,8 +95,6 @@
 </body>
 
 
-<<<<<<< HEAD
 </html>
 =======
 </html>
->>>>>>> 4cd14aaba2b9571e120af2ca68cc52066d289175

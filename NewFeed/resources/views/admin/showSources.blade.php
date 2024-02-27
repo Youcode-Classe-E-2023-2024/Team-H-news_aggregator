@@ -7,12 +7,11 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 mb-4">
                         <input id="t-text" type="text" name="searched" placeholder="Search" class="form-control" required="">
                     </div>
-                    <h2>Posts:</h2>
                     <form action="{{route('rss.send')}}" method="post" class="one">
                         @csrf
                         @method('post')
-                        <div class="row mb-4">
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3  ms-auto">
+                        <div class="row mb-4 " style="display: flex;align-items: center">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3  ">
                                 <select class="form-select form-select" aria-label="Default select example" name="category">
                                     <option class="option" selected="" value="0">All Category</option>
                                     @foreach($categories as $categorie)
@@ -28,12 +27,13 @@
                                     <option value="2">Oldest</option>
                                 </select>
                             </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 ">
+                                <div @class('col-4 hidden')></div>
+                                <div @class('col-4 hidden')></div>
+                                <button type="submit" name="submit" placeholder="Submit Resource" class="form-control my-4 fw-bold shadow col-2 text-center" style="margin-right: 17px">Filter</button>
+                            </div>
                         </div>
-                        <div class="input-group d-flex justify-content-end row">
-                            <div @class('col-4 hidden')></div>
-                            <div @class('col-4 hidden')></div>
-                            <input type="submit" name="submit" placeholder="Submit Resource" class="form-control my-4 fw-bold shadow col-2 text-center" style="margin-right: 17px">
-                        </div>
+
 
                     </form>
 

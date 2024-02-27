@@ -42,7 +42,7 @@ class FluxRSSController extends Controller
 
             if (Category::where('id', $category_id)->exists()) {
                 post::create([
-                    'url' => $request->url,
+//                    'url' => $request->url,
                     'title' => $item->title,
                     'description' => $item->description,
                     'image' => $image,
