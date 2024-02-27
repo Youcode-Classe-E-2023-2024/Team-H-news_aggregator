@@ -945,11 +945,9 @@ window.addEventListener("load", function(){
                 return response.json();
             })
             .then(data => {
-                statsUserValues = Object.values(data.statsUser);
-                statsPostsValues = Object.values(data.statsPosts);
-                console.log(data)
-
-                console.log(statsUserValues,statsPostsValues)
+                const statsUserValues = Object.values(data.statsUser);
+                const statsPostsValues = Object.values(data.statsPosts);
+                const dates = Object.keys(data.statsUser); // Extracting dates from statsUser, you can use statsPosts as well
 
                 var d_1C_3 = new ApexCharts(
                     document.querySelector("#uniqueVisits"),
@@ -1004,7 +1002,7 @@ window.addEventListener("load", function(){
                             data: statsPostsValues // Use the fetched statsPostsValues here
                         }],
                         xaxis: {
-                            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                            categories: dates, // Set the dates as x-axis categories
                         },
                         fill: {
                             type: 'gradient',
