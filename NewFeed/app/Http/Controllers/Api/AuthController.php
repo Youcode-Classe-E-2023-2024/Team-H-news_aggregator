@@ -68,10 +68,11 @@ class AuthController extends Controller
 
     /*======================  mohammed elghanam  =======================*/
     // task softdelete and restore
-    
+
     // function of softdelete
     public function destroy(User $user)
     {
+        // dd($user);
         $user->delete();
         session()->put('deleted_user_id', $user->id);
         return redirect()->route('display');
