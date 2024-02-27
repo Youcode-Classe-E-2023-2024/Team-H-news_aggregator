@@ -10,17 +10,20 @@ use Illuminate\Support\Facades\DB;
 
 class StatsadminController extends Controller
 {
-    public function nombreUtilisateurs()
+
+    public function nombreUtilisateursPost()
     {
-        $nombreUtilisateurs = User::count();
-        return response()->json(['nombre_utilisateurs' => $nombreUtilisateurs]);
+        $nombrePosts = Post::count(); // Nombre de posts
+        $nombreUtilisateurs = User::count(); // Nombre d'utilisateurs
+
+        return response()->json([
+            'nombre_utilisateurs' => $nombreUtilisateurs,
+            'nombre_posts' =>  $nombrePosts
+        ]);
     }
 
-    public function nombrePublications()
-    {
-        $nombrePublications = Post::count();
-        return $nombrePublications;
-    }
+
+
 
 
     public function tendanceEnregistrementUtilisateur()
