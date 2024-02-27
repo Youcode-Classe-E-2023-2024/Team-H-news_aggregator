@@ -21,8 +21,8 @@
             <span class="text-white">News</span> Forum
         </h1>
         <div class="flex justify-end gap-4 mr-2 text-white sm:text-md text-sm flex-1  ">
-            
-            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">Subscribe</span>
+            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] " onclick="toLogin()">Login</span>
+            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] " onclick="toRegister()">Register</span>
         </div>
     </div>
     <hr class="w-[100%] mx-auto"/>
