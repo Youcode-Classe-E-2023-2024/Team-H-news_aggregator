@@ -7,6 +7,7 @@
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/public/js/dashboard/dash_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/js/dashboard/dash_1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/dashboard.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +208,7 @@
       <workItem from="1708699309721" duration="2330000" />
       <workItem from="1708774054150" duration="41807000" />
       <workItem from="1708965219094" duration="26000" />
-      <workItem from="1709020598669" duration="18629000" />
+      <workItem from="1709020598669" duration="18926000" />
     </task>
     <servers />
   </component>
