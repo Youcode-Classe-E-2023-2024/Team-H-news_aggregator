@@ -98,4 +98,5 @@ Route::get('/display',function(){
 Route::get('/api/donnees-graphique', [StatsadminController::class, 'tendanceEnregistrementUtilisateur']);
 Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateurs']);
 Route::get('/api/tendances', [StatsadminController::class, 'tendancePosts'])->name('tendances');
+Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateursPost']);
 
