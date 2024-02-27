@@ -190,7 +190,7 @@
                         <div class="widget widget-chart-three">
                             <div class="widget-heading">
                                 <div class="">
-                                    <h5 class="">Unique Visitors</h5>
+                                    <h5 class="">Nombre de registres est Post  : six derniers jours </h5>
                                 </div>
 
                                 <div class="task-action">
