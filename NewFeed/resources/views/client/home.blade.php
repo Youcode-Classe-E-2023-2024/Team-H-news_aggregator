@@ -6,7 +6,7 @@
         <div class='flex flex-wrap w-full items-center justify-center gap-7 mt-5' id="headlineContainer">
 
 {{--            <x-news-card />--}}
-       
+
     </div>
 
     <h1 class='text-5xl font-light my-4 text-center uppercase'>Business</h1>
