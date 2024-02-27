@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/.env" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/.rnd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/public/css/apex/apexcharts.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/css/apex/apexcharts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/public/css/dark/dashboard/dash_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/css/dark/dashboard/dash_1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/public/css/dark/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/css/dark/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/public/css/dark/widgets/modules-widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/css/dark/widgets/modules-widgets.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/public/js/dashboard/dash_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/js/dashboard/dash_1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/public/js/dashboard/dash_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/public/js/dashboard/dash_2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/admin-layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/resources/views/components/layouts/admin-layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +207,7 @@
       <workItem from="1708699309721" duration="2330000" />
       <workItem from="1708774054150" duration="41807000" />
       <workItem from="1708965219094" duration="26000" />
-      <workItem from="1709020598669" duration="18103000" />
+      <workItem from="1709020598669" duration="18629000" />
     </task>
     <servers />
   </component>
