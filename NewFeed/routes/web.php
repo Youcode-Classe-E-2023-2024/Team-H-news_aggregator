@@ -67,7 +67,11 @@ Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index')
 /*======================  mohammed elghanam  =======================*/
 Route::get('/display',function(){
     return view('admin.dsplay_users');
-});
+})->name('display');
+
+Route::delete('/Softdelete/{user}', [AuthController::class, 'destroy'])->name('softdelete');
+
+Route::get('/restore',[ AuthController::class, 'restoreusers'])->name('restore');
 
 /*======================  mohammed elghanam  =======================*/
 

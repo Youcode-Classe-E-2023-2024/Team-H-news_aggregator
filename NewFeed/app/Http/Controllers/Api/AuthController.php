@@ -63,4 +63,29 @@ class AuthController extends Controller
      return response()->json(['user' => $user], 200);
 
     }
+
+
+
+    /*======================  mohammed elghanam  =======================*/
+    // task softdelete and restore
+    
+    // function of softdelete
+    public function destroy(User $user)
+    {
+        $user->delete();
+        session()->put('deleted_user_id', $user->id);
+        return redirect()->route('display');
+    }
+
+    // function restore users
+    public function restoreusers()
+    {
+        $user_id = session()->pull('deleted_user_id');
+        $user = User::withTrashed()->findOrFail($user_id);
+        $user->restore();
+        return redirect()->route('display');
+
+    }
+
+    /*======================  mohammed elghanam  =======================*/
 }
