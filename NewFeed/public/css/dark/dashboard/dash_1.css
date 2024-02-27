@@ -239,9 +239,13 @@ body.dark .widget.widget-chart-three .widget-heading .dropdown .dropdown-menu {
 body.dark .widget.widget-chart-three .apexcharts-legend-marker {
   left: -5px !important;
 }
-body.dark .widget.widget-chart-three #uniqueVisits {
-  overflow: hidden;
-}
+/*body.dark .widget.widget-chart-three #uniqueVisits {*/
+/*  overflow: hidden;*/
+/*    !*min-height: 360px!important;*!*/
+/*    height: 100%;*/
+/*    border: 1px solid red;*/
+/*    width: 100%;*/
+/*}*/
 
 /*
 	===============================

@@ -241,6 +241,8 @@ body.dark .widget.widget-chart-three .apexcharts-legend-marker {
 }
 body.dark .widget.widget-chart-three #uniqueVisits {
   overflow: hidden;
+    min-height: 360px!important;
+    border: 1px solid red;
 }
 
 /*
