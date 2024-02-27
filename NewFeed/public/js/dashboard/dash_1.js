@@ -995,10 +995,10 @@ window.addEventListener("load", function(){
                             colors: ['transparent']
                         },
                         series: [{
-                            name: 'Direct',
+                            name: 'Registre',
                             data: statsUserValues // Use the fetched statsUserValues here
                         }, {
-                            name: 'Organic',
+                            name: 'Post',
                             data: statsPostsValues // Use the fetched statsPostsValues here
                         }],
                         xaxis: {
