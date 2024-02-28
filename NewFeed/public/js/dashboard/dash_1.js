@@ -275,7 +275,7 @@ window.addEventListener("load", function(){
                             width: 2,
                         },
                         series: [{
-                            name: 'Sales',
+                            name: 'nombre utilisateur',
                             data: nombreJours
                         }],
                         labels: ['1', '2', '3', '4', '5', '6', '7'],
@@ -347,7 +347,7 @@ window.addEventListener("load", function(){
                             width: 2,
                         },
                         series: [{
-                            name: 'Sales',
+                            name: 'Posts',
                             data: nombrePostsJours
                         }],
                         labels: ['1', '2', '3', '4', '5', '6', '7'],
