@@ -23,4 +23,9 @@ class post extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function favoris()
+    {
+        return $this->hasMany(favoris::class);
+    }
 }

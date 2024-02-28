@@ -105,10 +105,9 @@ function displaYBusinessNews(newsData){
         newsContainer.appendChild(sectionTitle)
 
         category.posts.forEach((news) => {
-            console.log(news)
 
             const newImg = serverUrl + 'images/news.webp';
-            const iconHeart = news.favorise?serverUrl + 'images/heart1.png':serverUrl + 'images/heart2.png';
+            const iconHeart = news.favorise === 'not like'?serverUrl + 'images/heart1.png':serverUrl + 'images/heart2.png'
 
 
             const newsCard = `
@@ -149,9 +148,12 @@ function displaYBusinessNews(newsData){
     }
 
     function addFavoris(newsId){
-        fetch('api/favoris/'+newsId,
-        {
-            method: 'POST'
+        fetch('api/favoris/'+newsId, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            },
         })
             .then((response) => {
                 if (!response.ok) {
@@ -160,10 +162,10 @@ function displaYBusinessNews(newsData){
                 return response.json();
             })
             .then((data) => {
-                console.log(data)
+                fetchData()
             })
             .catch((error) => {
-                console.error('Fetch error:', error);
+                fetchData()
             });
     }
 
