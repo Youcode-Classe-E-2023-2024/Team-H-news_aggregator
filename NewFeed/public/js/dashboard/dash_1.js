@@ -248,113 +248,151 @@ window.addEventListener("load", function(){
 
             // Followers
 
-            var d_1options3 = {
-                chart: {
-                    id: 'sparkline1',
-                    type: 'area',
-                    height: 160,
-                    sparkline: {
-                        enabled: true
-                    },
-                },
-                stroke: {
-                    curve: 'smooth',
-                    width: 2,
-                },
-                series: [{
-                    name: 'Sales',
-                    data: [38, 60, 38, 52, 36, 40, 28 ]
-                }],
-                labels: ['1', '2', '3', '4', '5', '6', '7'],
-                yaxis: {
-                    min: 0
-                },
-                colors: ['#4361ee'],
-                tooltip: {
-                    x: {
-                        show: false,
+
+
+
+            fetch('/api/getNombreJours')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
                     }
-                },
-                grid: {
-                    show: false,
-                    xaxis: {
-                        lines: {
-                            show: false
+                    return response.json();
+                })
+                .then(data => {
+                    const nombreJours = data.statsUser;
+                    console.log(nombreJours);
+                    var d_1options3 = {
+                        chart: {
+                            id: 'sparkline1',
+                            type: 'area',
+                            height: 160,
+                            sparkline: {
+                                enabled: true
+                            },
+                        },
+                        stroke: {
+                            curve: 'smooth',
+                            width: 2,
+                        },
+                        series: [{
+                            name: 'Sales',
+                            data: nombreJours
+                        }],
+                        labels: ['1', '2', '3', '4', '5', '6', '7'],
+                        yaxis: {
+                            min: 0
+                        },
+                        colors: ['#4361ee'],
+                        tooltip: {
+                            x: {
+                                show: false,
+                            }
+                        },
+                        grid: {
+                            show: false,
+                            xaxis: {
+                                lines: {
+                                    show: false
+                                }
+                            },
+                            padding: {
+                                top: 5,
+                                right: 0,
+                                left: 0
+                            },
+                        },
+                        fill: {
+                            type: "gradient",
+                            gradient: {
+                                type: "vertical",
+                                shadeIntensity: 1,
+                                inverseColors: !1,
+                                opacityFrom: .30,
+                                opacityTo: .05,
+                                stops: [100, 100]
+                            }
                         }
-                    },
-                    padding: {
-                        top: 5,
-                        right: 0,
-                        left: 0
-                    },
-                },
-                fill: {
-                    type:"gradient",
-                    gradient: {
-                        type: "vertical",
-                        shadeIntensity: 1,
-                        inverseColors: !1,
-                        opacityFrom: .30,
-                        opacityTo: .05,
-                        stops: [100, 100]
-                    }
-                }
-            }
+                    };
+
+                    // Appel à ApexCharts pour créer le graphique
+                    var chart = new ApexCharts(document.querySelector("#hybrid_followers"), d_1options3);
+                    chart.render();
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
 
             // Referral
-
-            var d_1options4 = {
-                chart: {
-                    id: 'sparkline1',
-                    type: 'area',
-                    height: 160,
-                    sparkline: {
-                        enabled: true
-                    },
-                },
-                stroke: {
-                    curve: 'smooth',
-                    width: 2,
-                },
-                series: [{
-                    name: 'Sales',
-                    data: [ 60, 28, 52, 38, 40, 36, 38]
-                }],
-                labels: ['1', '2', '3', '4', '5', '6', '7'],
-                yaxis: {
-                    min: 0
-                },
-                colors: ['#e7515a'],
-                tooltip: {
-                    x: {
-                        show: false,
+            fetch('/api/getNombrePostsJours')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
                     }
-                },
-                grid: {
-                    show: false,
-                    xaxis: {
-                        lines: {
-                            show: false
+                    return response.json();
+                })
+                .then(data => {
+                    const nombrePostsJours = data.statsPosts;
+                    console.log(nombrePostsJours);
+                    var d_1options4 = {
+                        chart: {
+                            id: 'sparkline1',
+                            type: 'area',
+                            height: 160,
+                            sparkline: {
+                                enabled: true
+                            },
+                        },
+                        stroke: {
+                            curve: 'smooth',
+                            width: 2,
+                        },
+                        series: [{
+                            name: 'Sales',
+                            data: nombrePostsJours
+                        }],
+                        labels: ['1', '2', '3', '4', '5', '6', '7'],
+                        yaxis: {
+                            min: 0
+                        },
+                        colors: ['#e7515a'],
+                        tooltip: {
+                            x: {
+                                show: false,
+                            }
+                        },
+                        grid: {
+                            show: false,
+                            xaxis: {
+                                lines: {
+                                    show: false
+                                }
+                            },
+                            padding: {
+                                top: 5,
+                                right: 0,
+                                left: 0
+                            },
+                        },
+                        fill: {
+                            type:"gradient",
+                            gradient: {
+                                type: "vertical",
+                                shadeIntensity: 1,
+                                inverseColors: !1,
+                                opacityFrom: .30,
+                                opacityTo: .05,
+                                stops: [100, 100]
+                            }
                         }
-                    },
-                    padding: {
-                        top: 5,
-                        right: 0,
-                        left: 0
-                    },
-                },
-                fill: {
-                    type:"gradient",
-                    gradient: {
-                        type: "vertical",
-                        shadeIntensity: 1,
-                        inverseColors: !1,
-                        opacityFrom: .30,
-                        opacityTo: .05,
-                        stops: [100, 100]
-                    }
-                }
-            }
+                    };
+
+                    // Appel à ApexCharts pour créer le graphique
+                    var chart = new ApexCharts(document.querySelector("#hybrid_followers1"), d_1options4);
+                    chart.render();
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
 
             // Engagement Rate
 
@@ -1060,7 +1098,7 @@ window.addEventListener("load", function(){
 
         // Followers
 
-        var d_1C_5 = new ApexCharts(document.querySelector("#hybrid_followers"), d_1options3);
+      /*  var d_1C_5 = new ApexCharts(document.querySelector("#hybrid_followers"), d_1options3);
         d_1C_5.render()
 
         // Referral
@@ -1072,7 +1110,7 @@ window.addEventListener("load", function(){
 
         var d_1C_7 = new ApexCharts(document.querySelector("#hybrid_followers3"), d_1options5);
         d_1C_7.render()
-
+*/
 
 
         /*
