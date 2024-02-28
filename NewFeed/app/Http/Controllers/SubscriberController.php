@@ -21,6 +21,8 @@ class SubscriberController extends Controller
             'subscriber',
             'password',
         ]);
+
+        dd('sss');
         return back()->with('success', 'Vous avez été abonné avec succès.');
 
     }
