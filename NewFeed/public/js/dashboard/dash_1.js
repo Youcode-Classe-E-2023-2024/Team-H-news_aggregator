@@ -314,7 +314,7 @@ window.addEventListener("load", function(){
                         }
                     };
 
-                    // Appel à ApexCharts pour créer le graphique
+
                     var chart = new ApexCharts(document.querySelector("#hybrid_followers"), d_1options3);
                     chart.render();
                 })
@@ -386,7 +386,7 @@ window.addEventListener("load", function(){
                         }
                     };
 
-                    // Appel à ApexCharts pour créer le graphique
+
                     var chart = new ApexCharts(document.querySelector("#hybrid_followers1"), d_1options4);
                     chart.render();
                 })
@@ -985,7 +985,7 @@ window.addEventListener("load", function(){
             .then(data => {
                 const statsUserValues = Object.values(data.statsUser);
                 const statsPostsValues = Object.values(data.statsPosts);
-                const dates = Object.keys(data.statsUser); // Extracting dates from statsUser, you can use statsPosts as well
+                const dates = Object.keys(data.statsUser);
 
                 var d_1C_3 = new ApexCharts(
                     document.querySelector("#uniqueVisits"),
