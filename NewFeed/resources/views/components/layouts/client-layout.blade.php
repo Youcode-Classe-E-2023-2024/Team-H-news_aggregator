@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title}} </title>
     <link rel="stylesheet" href="{{asset('css/client.css')}}">
-    <script src="{{'js/client.js'}}"></script>
+    <script src="{{'js/client.js'}}" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     @vite('resources/css/app.css')
 
 </head>
@@ -20,9 +22,17 @@
         <h1 class="text-center text-[#fc444a] font-light sm:text-[23px] text-[19px] xxl:text-[40px] flex-1">
             <span class="text-white">News</span> Forum
         </h1>
-        <div class="flex justify-end gap-4 mr-2 text-white sm:text-md text-sm flex-1  ">
-            
-            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] ">Subscribe</span>
+        <div class="flex justify-end gap-4 mr-2 text-white sm:text-md text-sm flex-1  " id="nav-right">
+            <div id="userDropdown" class="z-10 hidden position-relative  bg-white divide-y divide-gray-100 rounded-lg shadow w-75 dark:bg-gray-700 dark:divide-gray-600" style="position: absolute;top: 50%">
+                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                    <div>Bonnie Green</div>
+                    <div class="font-medium truncate">name@flowbite.com</div>
+                </div>
+
+                <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" onclick="logout()">Log out</a>
+                </div>
+            </div>
         </div>
     </div>
     <hr class="w-[100%] mx-auto"/>
@@ -64,7 +74,7 @@
 <!-- ./header -->
 {{-- Main --}}
 <div class='w-[85%] mx-auto '>
-    <div class='text-white relative pt-[9.5rem] '>
+    <div class='text-white relative pt-[9.5rem] ' id="main">
         {{$slot}}
     </div>
 </div>

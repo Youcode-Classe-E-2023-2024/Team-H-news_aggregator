@@ -7,15 +7,16 @@
                     <div class="col-lg-3 col-md-3 col-sm-3 mb-4">
                         <input id="t-text" type="text" name="searched" placeholder="Search" class="form-control" required="">
                     </div>
-                    <form action="{{route('rss.send')}}" method="post" class="one">
+                    <h2>Posts:</h2>
+                    <form action="{{route('rss.send')}}" method="post">
                         @csrf
-                        @method('post')
-                        <div class="row mb-4 " style="display: flex;align-items: center">
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3  ">
+                        <div class="row mb-4">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3  ms-auto">
                                 <select class="form-select form-select" aria-label="Default select example" name="category">
-                                    <option class="option" selected="" value="0">All Category</option>
                                     @foreach($categories as $categorie)
-                                        <option class="option" value="{{ $categorie->id}}">{{$categorie->name}}</option>
+                                        <option class="option" value="{{ $categorie->id }}" @if($categorie->id == 1) selected @endif>
+                                            {{ $categorie->name }}
+                                        </option>
                                     @endforeach
                                 </select>
 
@@ -27,13 +28,12 @@
                                     <option value="2">Oldest</option>
                                 </select>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 ">
-                                <div @class('col-4 hidden')></div>
-                                <div @class('col-4 hidden')></div>
-                                <button type="submit" name="submit" placeholder="Submit Resource" class="form-control my-4 fw-bold shadow col-2 text-center" style="margin-right: 17px">Filter</button>
-                            </div>
                         </div>
-
+                        <div class="input-group d-flex justify-content-end row">
+                            <div @class('col-4 hidden')></div>
+                            <div @class('col-4 hidden')></div>
+                            <input type="submit" name="submit" placeholder="Submit Resource" class="form-control my-4 fw-bold shadow col-2 text-center" style="margin-right: 17px">
+                        </div>
 
                     </form>
 
@@ -45,7 +45,7 @@
                         <a href="app-blog-post.html" class="card style-2 mb-md-0 mb-4">
                             <img src="{{asset('images/grid-blog-style-3.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body px-0 pb-0">
-                                <h5 class="card-title mb-3">14 Tips to improve your photography</h5>
+                                <h5 class="card-title mb-3">14 Tips to improve your photography @if(isset($posts))@dd($posts) @else dkdd @endif</h5>
                                 <div class="media mt-4 mb-0 pt-1">
                                     <img src="{{asset('images/profile-3.jpg')}}" class="card-media-image me-3" alt="">
                                     <div class="media-body">
@@ -84,11 +84,11 @@
                                         <img src="{{$post['image']}}" class="card-img-top" alt="...">
                                     @endif
                                     <div class="card-body px-0 pb-0">
-                                        <h5 class="card-title mb-3">{{$post['description']}}</h5>
+                                        <h5 class="card-title mb-3">{{substr($post['description'], 0, 100) }}</h5>
                                         <div class="media mt-4 mb-0 pt-1">
                                             <img src="{{asset('images/profile-3.jpg')}}" class="card-media-image me-3" alt="">
                                             <div class="media-body">
-                                                <h4 class="media-heading mb-1">{{$post['title']}}</h4>
+                                                <h4 class="media-heading mb-1">{{ substr($post['title'], 0, 40) }}</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -142,23 +142,5 @@
         </div>
 
     </div>
-    <script>
-        const searched = document.getElementById('t-text');
-        const cards = document.querySelectorAll('[card]');
 
-        function getSearched() {
-            console.log('cool');
-            for (let i = 0; i < cards.length; i++) {
-                if (!cards[i].innerHTML.includes(searched.value)) {
-                    cards[i].style.display = 'none';
-                } else {
-                    cards[i].style.display = 'block';
-                }
-            }
-        }
-
-        searched.addEventListener('input', getSearched);
-
-        const pagination = document.getElementsByClassName('pagination');
-    </script>
-</x-layouts.admin-layout >
+</x-layouts.admin-layout>

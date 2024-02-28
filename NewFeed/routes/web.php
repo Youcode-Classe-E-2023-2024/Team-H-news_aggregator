@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FluxRSSController;
 use App\Http\Controllers\test;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
+use \App\Http\Controllers\FavorisController;
+use App\Http\Controllers\Post;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +45,7 @@ Route::post('/reset/password', [AuthController::class, 'reset_password'])->name(
 //     return view('authentication.reset');
 // });
 
-Route::get('/',function(){
-    return view('client.home');
-})->name('home');
+Route::get('/',[UserController::class , 'index'])->name('home');
 
 Route::get('/dashboard',function(){
     return view('admin.dashboard');
@@ -92,3 +94,5 @@ Route::get('/display',function(){
 //Route::get('/dashboard',function(){
 //    return view('admin.dashboard');
 //})->name('dashboard');
+
+Route::get('/newData',[Post::class,'getPosts']);
