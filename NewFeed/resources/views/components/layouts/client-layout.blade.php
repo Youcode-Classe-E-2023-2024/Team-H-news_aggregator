@@ -10,12 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     @vite('resources/css/app.css')
-
+    @livewireStyles
 </head>
 <body class="">
 
 {{-- Header --}}
-<nav class="h-auto  z-[999] p-4 fixed w-full text-white">
+<nav class="h-auto  z-[999] p-4 fixed w-full text-white" style="backdrop-filter: blur(10px);">
     <div class="flex justify-between w-full items-center pb-4">
         <span class="text-white font-light cursor-pointer flex-1" onclick="toggleSidebar()"><img
                 src={{{ asset('images/icons8-menu-50.png') }}} alt="" srcset=""></span>
@@ -38,10 +38,10 @@
     <hr class="w-[100%] mx-auto"/>
     <div class="w-full pt-5 font-thin px-8 flex justify-center gap-7 sm:text-[20px] sm:gap-9 text-sm items-center">
         <a href=""><p>Home</p></a>
-        <a href=""><p>News</p></a>
-        <a href=""><p>Technology</p></a>
-        <a href=""><p>Business</p></a>
-        <a href=""><p>Sports</p></a>
+        <a href="{{ route('page', 'News') }}"><p>News</p></a>
+        <a href="{{ route('page', 'Technology') }}"><p>Technology</p></a>
+        <a href="{{ route('page', 'Business') }}"><p>Business</p></a>
+        <a href="{{ route('page', 'Sports') }}"><p>Sports</p></a>
         <a href=""><p>About</p></a>
     </div>
 </nav>
@@ -108,5 +108,6 @@
     </p>
 </footer>
 {{-- Footer --}}
+@livewireScripts
 </body>
 </html>

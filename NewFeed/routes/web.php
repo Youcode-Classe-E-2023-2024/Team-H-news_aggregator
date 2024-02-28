@@ -96,3 +96,7 @@ Route::get('/display',function(){
 //})->name('dashboard');
 
 Route::get('/newData',[Post::class,'getPosts']);
+
+
+route::get('page/{categorie}',[CategoriesController::class,'GetPostsByCategory'])->name('page');
+
