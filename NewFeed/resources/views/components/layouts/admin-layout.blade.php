@@ -52,7 +52,7 @@
                 var user = response.data.user;
                 console.log(user.roles);
                 if (user.roles != 'admin') {
-                    window.location.href = '/';
+                    // window.location.href = '/';
                 }else{
                     console.log(user.roles);
                     console.log(user)
@@ -63,14 +63,19 @@
 
             })
             .catch((error) => {
-                window.location.href = '/login';
+                // window.location.href = '/login';
 
             });
 
         }
 
 
+
+
     </script>
+    <style>
+
+    </style>
 
     <link href="{{ asset('css/dark/apps/notes.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('css/light/apps/notes.css') }}" rel="stylesheet" type="text/css" />

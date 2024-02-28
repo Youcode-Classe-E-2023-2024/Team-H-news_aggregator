@@ -2,7 +2,11 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\CategoriesController;
+
+use App\Http\Controllers\StatsadminController;
+
 use App\Http\Controllers\SubscriberController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FluxRSSController;
 use App\Http\Controllers\test;
@@ -94,5 +98,19 @@ Route::get('/display',function(){
 //Route::get('/dashboard',function(){
 //    return view('admin.dashboard');
 //})->name('dashboard');
+
+
+
+/*============================== Walid Saifi ============================*/
+
+Route::get('/api/donnees-graphique', [StatsadminController::class, 'tendanceEnregistrementUtilisateur']);
+Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateurs']);
+Route::get('/api/tendances', [StatsadminController::class, 'tendancePosts'])->name('tendances');
+Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateursPost']);
+
+Route::get('/api/getNombreJours', [StatsadminController::class, 'getNombreJours']);
+
+Route::get('/api/getNombrePostsJours', [StatsadminController::class, 'getNombrePostsJours']);
+
 
 Route::get('/newData',[Post::class,'getPosts']);

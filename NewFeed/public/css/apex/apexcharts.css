@@ -5,6 +5,8 @@
 }
 
 
+
+
 /* scrollbar is not visible by default for legend, hence forcing the visibility */
 .apexcharts-canvas ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -112,13 +114,13 @@
   font-weight: 600;
 }
 
-.apexcharts-tooltip-text-goals-label, 
+.apexcharts-tooltip-text-goals-label,
 .apexcharts-tooltip-text-goals-value {
   padding: 6px 0 5px;
 }
 
-.apexcharts-tooltip-goals-group, 
-.apexcharts-tooltip-text-goals-label, 
+.apexcharts-tooltip-goals-group,
+.apexcharts-tooltip-text-goals-label,
 .apexcharts-tooltip-text-goals-value {
   display: flex;
 }
