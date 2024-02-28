@@ -8,30 +8,46 @@ use Illuminate\Support\Facades\Auth;
 
 class Post extends Controller
 {
-    public function getPosts(){
+    public function getPosts()
+    {
         $user = Auth::user();
-        $categoriesWithPosts = Category::with(['posts' => function ($query) use ($user) {
-            $query->orderBy('created_at', 'desc');
+
+        $categoriesWithPosts = Category::with(['posts.favoris' => function ($query) use ($user) {
+            if ($user) {
+                $query->where('user_id', $user->id);
+            }
         }])->get();
+
         $result = [];
+
         foreach ($categoriesWithPosts as $category) {
             $categoryTitle = $category->name;
+
             $postsData = $category->posts->map(function ($post) use ($user) {
-                $post['favorise'] = $post->favoris->isNotEmpty() ? 'like' : 'not like';
+                $favoriseStatus = 'not like';
+
+                if ($post->relationLoaded('favoris') && $post->favoris !== null) {
+                    $favoriseStatus = $post->favoris->isNotEmpty() ? 'like' : 'not like';
+                }
+
                 return [
                     'id' => $post->id,
                     'title' => $post->title,
                     'description' => $post->description,
                     'image' => $post->image,
                     'created_at' => $post->created_at,
-                    'favorise' => $post['favorise'],
+                    'favorise' => $favoriseStatus,
                 ];
             });
+
             $result[] = [
                 'categoryTitle' => $categoryTitle,
                 'posts' => $postsData->toArray(),
             ];
         }
-        return response()->json($result);
+
+        return $result;
     }
+
+
 }
