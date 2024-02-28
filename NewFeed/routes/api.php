@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FavorisController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,6 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:api')->group(function () {
     Route::get('get-user', [AuthController::class, 'userInfo']);
-    Route::get('/test',function (){
-        return 'tes';
-    });
+    Route::post('favoris/{postId}',[FavorisController::class,'makeFavoritePost']);
+
 });

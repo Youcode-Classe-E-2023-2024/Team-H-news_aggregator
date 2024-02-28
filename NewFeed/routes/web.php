@@ -2,11 +2,19 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\CategoriesController;
+
 use App\Http\Controllers\StatsadminController;
+
+use App\Http\Controllers\SubscriberController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FluxRSSController;
 use App\Http\Controllers\test;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
+use \App\Http\Controllers\FavorisController;
+use App\Http\Controllers\Post;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +49,7 @@ Route::post('/reset/password', [AuthController::class, 'reset_password'])->name(
 //     return view('authentication.reset');
 // });
 
-Route::get('/',function(){
-    return view('client.home');
-})->name('home');
+Route::get('/',[UserController::class , 'index'])->name('home');
 
 Route::get('/dashboard',function(){
     return view('admin.dashboard');
@@ -66,6 +72,7 @@ Route::delete('/categories',[CategoriesController::class,'delete'])->name('delet
 
 /**--- fati ----**/
 
+Route::post('/home' ,[subscriberController::class, 'addSubscriber'])->name('add_subscriber');
 
 
 /** ---- Mohammed ---- **/
@@ -93,6 +100,7 @@ Route::get('/display',function(){
 //})->name('dashboard');
 
 
+
 /*============================== Walid Saifi ============================*/
 
 Route::get('/api/donnees-graphique', [StatsadminController::class, 'tendanceEnregistrementUtilisateur']);
@@ -104,3 +112,5 @@ Route::get('/api/getNombreJours', [StatsadminController::class, 'getNombreJours'
 
 Route::get('/api/getNombrePostsJours', [StatsadminController::class, 'getNombrePostsJours']);
 
+
+Route::get('/newData',[Post::class,'getPosts']);

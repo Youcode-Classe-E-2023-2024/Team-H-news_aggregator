@@ -19,4 +19,9 @@ class Category extends Model
         'description',
         'id',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }
