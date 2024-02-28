@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FluxRSSController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\test;
 use App\Http\Controllers\DashboardController;
 
@@ -77,6 +78,7 @@ Route::post('/addRss', [FluxRSSController::class, 'store'])->name('addRss.store'
 Route::get('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.index');
 Route::post('/showRss', [FluxRSSController::class, 'showRss'])->name('rss.send');
 
+Route::get('/post/{id}/content',[CommentController::class, 'index'])->name('post.index');
 /** ---- Mohammed ---- **/
 
 

@@ -29,37 +29,36 @@ class AuthController extends Controller
             'password' => 'required|min:6',
             'confirme_password' => 'required|same:password',
         ]);
-       
+
         if ($validator->fails()) {
             $error = $validator->errors();
             // return redirect()->back()->withErrors($validator)->withInput();
             return response()->json(['error' => $error], 400);
-
         }
- 
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' =>Hash::make($request->password)
         ]);
- 
+
         $token = $user->createToken('Laravel-10-Passport-Auth')->accessToken;
         // return redirect()->back()->with('message', 'Your have been successfully registered');
         return response()->json(['token' => $token], 200);
     }
- 
+
     /**
      * Login Req
      */
     public function login(Request $request)
     {
-        
+
 
         $data = [
             'email' => $request->email,
             'password' => $request->password
         ];
- 
+
         if (auth()->attempt($data)) {
             $token = auth()->user()->createToken('Laravel-10-Passport-Auth')->accessToken;
             return response()->json(['token' => $token], 200);
@@ -70,11 +69,11 @@ class AuthController extends Controller
         }
     }
 
-    public function userInfo() 
+    public function userInfo()
     {
 
      $user = auth()->user();
-     
+
      return response()->json(['user' => $user], 200);
 
     }
@@ -82,9 +81,9 @@ class AuthController extends Controller
 
 
     public function send_email(Request $request){
-        
-        
-        
+
+
+
         $token = Str::random(64);
         // dd($token);
         DB::table('password_reset_tokens')->insert([
@@ -127,13 +126,13 @@ class AuthController extends Controller
             }
 
             User::where('email', $request->email)->update(['password' => Hash::make($request->password)]);
-        
+
             DB::table('password_reset_tokens')
                 ->where([
                     'email' => $request->email
                 ])->delete();
 
             return redirect()->route('login');
-                
+
     }
 }
