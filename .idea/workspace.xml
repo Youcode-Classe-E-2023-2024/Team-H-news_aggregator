@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/NewFeed/resources/views/client/details.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/app/Models/comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewFeed/.env" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/.env" afterDir="false" />
@@ -192,6 +194,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Apache24\htdocs\Team-H-news_aggregator\NewFeed\resources\views\admin" />
       <recent name="C:\Apache24\htdocs\Team-H-news_aggregator\NewFeed\resources\views\client" />
       <recent name="C:\Apache24\htdocs\Team-H-news_aggregator\NewFeed\resources\views" />
     </key>
@@ -214,7 +217,7 @@
       <workItem from="1708699123624" duration="178000" />
       <workItem from="1708699309721" duration="2330000" />
       <workItem from="1708774054150" duration="41807000" />
-      <workItem from="1709115414020" duration="1412000" />
+      <workItem from="1709115414020" duration="1802000" />
     </task>
     <servers />
   </component>
