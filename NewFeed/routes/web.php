@@ -100,3 +100,7 @@ Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateurs']);
 Route::get('/api/tendances', [StatsadminController::class, 'tendancePosts'])->name('tendances');
 Route::get('/api/nbrUser', [StatsadminController::class, 'nombreUtilisateursPost']);
 
+Route::get('/api/getNombreJours', [StatsadminController::class, 'getNombreJours']);
+
+Route::get('/api/getNombrePostsJours', [StatsadminController::class, 'getNombrePostsJours']);
+
