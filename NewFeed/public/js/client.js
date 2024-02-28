@@ -1,4 +1,6 @@
 const serverUrl = 'http://127.0.0.1:8000/'
+
+
 const newsData = [
     {
         id: 1,
@@ -54,10 +56,9 @@ const newsBusinessData = [
 document.addEventListener('DOMContentLoaded', function() {
 
     displayHeadline()
-    displaYBusinessNews()
+    fetchData()
 
-
-
+    displayNavbar()
 });
 
 
@@ -89,34 +90,47 @@ function displayHeadline(){
     headlineContainer.innerHTML += headlineCard.join('')
 }
 
-function displaYBusinessNews(){
-    const businessContainer = document.getElementById('businessContainer');
-    const businessCard = newsBusinessData.map((news)=>{
-        const newImg = serverUrl+'images/news.webp'
-        const iconHeart = serverUrl+'images/heart1.png';
+function displaYBusinessNews(newsData){
 
-        return(
-            `
+    const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = '';
+
+    newsData.forEach((category) => {
+        const newsCategory = category.categoryTitle;
+
+        const sectionTitle = document.createElement('h1');
+        sectionTitle.classList.add('text-5xl');
+        sectionTitle.textContent = newsCategory;
+
+        newsContainer.appendChild(sectionTitle)
+
+        category.posts.forEach((news) => {
+            console.log(news)
+
+            const newImg = serverUrl + 'images/news.webp';
+            const iconHeart = news.favorise?serverUrl + 'images/heart1.png':serverUrl + 'images/heart2.png';
+
+
+            const newsCard = `
                 <div data-news-id=${news.id} class='md:w-[900px] w-[400px] h-[400px] sm:h-[250px] flex flex-col sm:flex-row gap-2 items-center justify-center border border-slate-900 my-4 sm:p-3 py-3 rounded-sm'>
-                    <img src="${newImg}"alt="title" class='sm:w-[200px] w-full h-[170px] my-1  sm:h-[200px] object-cover'/>
-
+                    <img src="${news.image}" alt="title" class='sm:w-[200px] w-full h-[170px] my-1  sm:h-[200px] object-cover'/>
                     <div class='px-3'>
-                        <h1 class='text-[15px] sm:text-lg my-1'>Voda Idea to discuss fundraising on Feb 27, mulls rights issue, QIP, FPO, other means; stock up 6% - Moneycontrol</h1>
-                        <p class='sm:text-sm text-[13px] text-gray-400 my-1 font-thin'>Shares of Vodafone Idea closed 6 percent higher on November 22 after Aditya Birla Group Chairman Kumar Mangalam Birla on Thursday said that the group was committed to the cash-strapped Vodafone Idea.</p>
+                        <h1 class='text-[15px] sm:text-lg my-1'>${news.title}</h1>
+                        <p class='sm:text-sm text-[13px] text-gray-400 my-1 font-thin'>${news.description}</p>
                         <p class='text-md text-gray-300 my-1'>Admin</p>
-                        <a href={link} target="_blank" class='text-sm mt-3 font-light flex gap-2 items-center text-[#fc444a] '>Read More <AiOutlineArrowRight/></a>
-                        <img src="${iconHeart}" onclick="addFavoris(${news.id})" id="icon-heart" class="" alt="" srcset="" style="position: relative;left: 95%;bottom:10%;background: white;border-radius: 15px;padding: 5px">
-
+                        <a href=${news.link} target="_blank" class='text-sm mt-3 font-light flex gap-2 items-center text-[#fc444a] '>Read More <AiOutlineArrowRight/></a>
+                       ${isLoggedIn() ? `
+                            <img src="${iconHeart}" onClick="addFavoris(${news.id})" id="icon-heart" class="" alt="" srcSet=""
+                                 style="position: relative; left: 95%; bottom: 10%; background: white; border-radius: 15px; padding: 5px">
+                        ` : ''}
                     </div>
                 </div>
-
-            `
-        )
-    })
+            `;
 
 
-
-    businessContainer.innerHTML += businessCard.join('')
+            newsContainer.innerHTML += newsCard;
+        });
+    });
 }
 
 
@@ -135,24 +149,85 @@ function displaYBusinessNews(){
     }
 
     function addFavoris(newsId){
-        const notLiked = serverUrl+'images/heart1.png'
-        const liked = serverUrl+'images/heart2.png'
-        const iconHeart = document.querySelector(`[data-news-id="${newsId}"] #icon-heart`);
-        console.log(iconHeart)
-        if(iconHeart.src !== liked){
-            iconHeart.src = liked;
-            console.log('liked')
-        }else{
-            iconHeart.src = notLiked;
-            console.log('not liked')
-
-        }
-
+        fetch('api/favoris/'+newsId,
+        {
+            method: 'POST'
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data)
+            })
+            .catch((error) => {
+                console.error('Fetch error:', error);
+            });
     }
-function toLogin(){
-    window.location.href = '/login';
+
+    function toLogin(){
+        window.location.href = '/login';
+    }
+
+    function toRegister(){
+        window.location.href = '/register';
+    }
+
+function fetchData(){
+    fetch('newData')
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((data) => {
+
+            displaYBusinessNews(data);
+        })
+        .catch((error) => {
+            console.error('Fetch error:', error);
+        });
 }
 
-function toRegister(){
-    window.location.href = '/register';
+
+function isLoggedIn(){
+    const token = localStorage.getItem('token');
+    return token ? true : false;
+}
+
+function displayNavbar(){
+    const navRight = document.getElementById('nav-right');
+    console.log(navRight)
+
+    if (isLoggedIn()) {
+        navRight.innerHTML += `
+            <img id="avatarButton" onclick="openUserLogout()" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="https://imgs.search.brave.com/9B4B0npB9UuaVucFOq-IuOvQqL0rTMXvnH6OTjIVX0Q/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9idWZm/ZXIuY29tL2xpYnJh/cnkvY29udGVudC9p/bWFnZXMvMjAyMi8w/My9za2l0Y2gtLTct/LnBuZw" alt="User dropdown">
+
+        `;
+    } else {
+        navRight.innerHTML +=
+            `<span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] " onclick="toLogin()">Login</span>
+            <span class="w-24 text-center h-14 border border-white p-4 cursor-pointer text-sm hover:bg-[#fc444a] " onclick="toRegister()">Register</span>`;
+    }
+
+
+}
+
+function openUserLogout(){
+    const userDropdown = document.getElementById('userDropdown');
+
+
+    if(userDropdown.classList.contains('hidden')){
+        userDropdown.classList.remove('hidden');
+    }else{
+        userDropdown.classList.add('hidden');
+    }
+}
+
+function logout(){
+    localStorage.removeItem('token');
+    window.location.href = '/';
 }

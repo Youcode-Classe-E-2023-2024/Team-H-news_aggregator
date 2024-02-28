@@ -82,13 +82,30 @@
             axios.post('http://127.0.0.1:8000/api/login', data)
                 .then((response) => {
                     const data = response.data;
+                    console.log(data.token);
                     localStorage.setItem('token', data.token);
-                    window.location.href = '/dashboard';
 
+                    axios.get('api/get-user', {
+                        headers: {
+                            'Authorization': 'Bearer ' + data.token,
+                        }
+                    })
+                        .then(response => {
+                            var role = response.data.user.roles;
+                            if (role == 'admin') {
+                                window.location.href = '/dashboard';
+                            } else {
+                                window.location.href = '/';
+                            }
+                        })
+                        .catch(error => {
+                            localStorage.clear();
+                            location.reload();
+                        });
 
                 })
                 .catch((error) => {
-                    var errors=error.response.data.error;
+                    var errors = error.response.data.error;
 
                     document.getElementById('errorContainer').innerHTML = errors;
                 });
