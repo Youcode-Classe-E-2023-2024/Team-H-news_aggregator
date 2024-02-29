@@ -119,3 +119,8 @@ Route::get('/newData',[Post::class,'getPosts']);
 route::get('page/{categorie}',[CategoriesController::class,'GetPostsByCategory'])->name('page');
 route::get('detail/{id}',[Post::class,'GetPostsById'])->name('detail');
 
+
+Route::get('/profile', function () {
+    return view('admin.profile');
+})->name('profile');
+Route::post('/profile/update', [UserController::class, 'update_user'])->name('update_user');
