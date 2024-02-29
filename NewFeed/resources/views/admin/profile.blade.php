@@ -37,7 +37,7 @@
                                                                                 <div class="col-md-6">
                                                                                     <div class="form-group">
                                                                                         <label for="username">Username</label>
-                                                                                        <input type="text" class="form-control mb-3" id="username" placeholder="Username" value="{{ Auth::user()->username }}" name="username">
+                                                                                        <input type="text" class="form-control mb-3" id="username" placeholder="Username" value="{{ Auth::user()->name }}" name="username">
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="col-md-12 mt-1">
