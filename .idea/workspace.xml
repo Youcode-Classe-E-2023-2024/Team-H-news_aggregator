@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,133 +41,140 @@
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/NewFeed/vendor/composer" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/clock" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/filp/whoops" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/nette/schema" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/nette/utils" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/defuse/php-encryption" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/commonmark" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/config" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/event" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/flysystem-local" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/mime-type-detection" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/oauth2-server" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/uri" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/league/uri-interfaces" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/nyholm/psr7" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/ramsey/collection" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/backtrace" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/flare-client-php" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/ignition" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/laravel-ignition" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/dflydev/dot-access-data" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/passport" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/pint" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/prompts" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/sail" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/sanctum" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/serializable-closure" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/tinker" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/mockery/mockery" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/mailer" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-php83" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-uuid" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/psr-http-message-bridge" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/uid" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/theseer/tokenizer" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/fakerphp/faker" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/firebase/php-jwt" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/hamcrest/hamcrest-php" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/lcobucci/clock" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/lcobucci/jwt" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/carbonphp/carbon-doctrine-types" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/fruitcake/php-cors" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/paragonie/constant_time_encoding" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/paragonie/random_compat" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/phpseclib/phpseclib" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/cli-parser" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/code-unit" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/complexity" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/global-state" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/lines-of-code" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/type" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/promises" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/uri-template" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/nunomaduro/termwind" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/tijsverkoyen/css-to-inline-styles" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/NewFeed/vendor/graham-campbell/result-type" />
-      <path value="$PROJECT_DIR$/NewFeed/vendor/simplepie/simplepie" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/NewFeed/vendor/willvincent/feeds" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/simplepie/simplepie" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/carbonphp/carbon-doctrine-types" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/lcobucci/clock" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/laravel-ignition" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/ignition" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/flare-client-php" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/backtrace" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/uri-interfaces" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/flysystem-local" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/event" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/config" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/laravel-package-tools" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/laravel-medialibrary" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/NewFeed/vendor/spatie/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="2clVjr7EiHJUEfchF1YitnLE1m6" />
@@ -171,22 +185,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Apache24/htdocs/Team-H-news_aggregator",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Apache24/htdocs/Team-H-news_aggregator&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.web.browsers&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -207,6 +221,7 @@
       <workItem from="1708774054150" duration="41807000" />
       <workItem from="1708965219094" duration="26000" />
       <workItem from="1709020598669" duration="34140000" />
+      <workItem from="1709196236684" duration="1404000" />
     </task>
     <servers />
   </component>
