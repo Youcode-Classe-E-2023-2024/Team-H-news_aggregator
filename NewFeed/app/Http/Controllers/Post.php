@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\post as postmodel;
 use Illuminate\Support\Facades\Auth;
 
 class Post extends Controller
@@ -47,6 +48,10 @@ class Post extends Controller
         }
 
         return $result;
+    }
+    public function  GetPostsById($id){
+        $post = postmodel::where('id', $id)->first();
+        return view('client.detail-page',compact('post'));
     }
 
 

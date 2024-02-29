@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\post;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -56,5 +57,17 @@ class CategoriesController extends Controller
         $category->delete();
 
         return redirect(route('categories'))->with('message', 'Category deleted successfully.');
+    }
+
+
+    // mokhlis 
+    public function GetPostsByCategory($category){
+        $cate = Category::where('name', $category)->first(); // Use 'first' to get a single object
+        if ($cate) {
+                    return view('client.page',compact('category'));
+        } else {
+            // Handle the case where the category is not found
+            dd("Category not found");
+        }
     }
 }

@@ -14,7 +14,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use \App\Http\Controllers\FavorisController;
 use App\Http\Controllers\Post;
-
+use App\Models\post as ModelsPost;
 
 /*
 |--------------------------------------------------------------------------
@@ -114,3 +114,8 @@ Route::get('/api/getNombrePostsJours', [StatsadminController::class, 'getNombreP
 
 
 Route::get('/newData',[Post::class,'getPosts']);
+
+
+route::get('page/{categorie}',[CategoriesController::class,'GetPostsByCategory'])->name('page');
+route::get('detail/{id}',[Post::class,'GetPostsById'])->name('detail');
+
