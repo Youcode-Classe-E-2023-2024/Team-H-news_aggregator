@@ -139,6 +139,13 @@
       <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/simplepie/simplepie" />
       <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/willvincent/feeds" />
+      <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/maennchen/zipstream-php" />
+      <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/spatie/image" />
+      <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/spatie/image-optimizer" />
+      <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/spatie/laravel-medialibrary" />
+      <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/spatie/laravel-package-tools" />
+      <excludeFolder url="file://$MODULE_DIR$/NewFeed/vendor/spatie/temporary-directory" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
