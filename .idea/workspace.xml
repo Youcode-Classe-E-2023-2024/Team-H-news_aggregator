@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2199b9b0-5889-43a6-bbec-f87e7f57b3e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Team-H-news_aggregator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewFeed/resources/views/admin/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewFeed/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewFeed/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/NewFeed/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +217,7 @@
       <workItem from="1708774054150" duration="41807000" />
       <workItem from="1708965219094" duration="26000" />
       <workItem from="1709020598669" duration="34140000" />
-      <workItem from="1709196236684" duration="1404000" />
+      <workItem from="1709196236684" duration="8906000" />
     </task>
     <servers />
   </component>
